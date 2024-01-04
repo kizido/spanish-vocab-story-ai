@@ -5,8 +5,10 @@ import {
   UisAngleRight,
   UisCheckCircle,
 } from "@iconscout/react-unicons-solid";
+import { useNavigate } from "react-router-dom";
 
 export default function VocabAmountForm() {
+  let navigate = useNavigate();
   const [vocabAmount, setVocabAmount] = useState(5);
 
   const decrementVocabAmount = () => {
@@ -16,6 +18,9 @@ export default function VocabAmountForm() {
   };
   const incrementVocabAmount = () => {
     setVocabAmount(vocabAmount + 1);
+  };
+  const goToFlashCards = () => {
+    navigate("/flashcards");
   };
   return (
     <div className={styles.vocabAmountSection}>
@@ -38,7 +43,7 @@ export default function VocabAmountForm() {
         </div>
         <UisCheckCircle
           className={styles.vocabAmountCheckmark}
-          onClick={() => console.log("MOVE TO FLASHCARDS")}
+          onClick={goToFlashCards}
         />
       </div>
     </div>

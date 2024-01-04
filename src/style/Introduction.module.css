@@ -1,0 +1,53 @@
+.vocabAmountSection {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vocabAmountQuestion {
+    text-align: center;
+    max-width: 35rem;
+    /* margin-top: 20rem;
+    margin-left: auto;
+    margin-right: auto; */
+}
+.vocabAmountInputSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vocabAmountInputBox {
+    display: inline-flex;
+    width: 20rem;
+    height: 5rem;
+    border: 2px solid black;
+    border-radius: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+.vocabAmountInputBox p {
+    font-size: 4em;
+    font-weight: 600;
+    text-align: center;
+}
+.vocabAmountArrow {
+    color: gray;
+    user-select: none;
+}
+.vocabAmountArrow:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.vocabAmountCheckmark {
+    width: 100px;
+    height: 100px;
+    color: #17F32C;
+}
+.vocabAmountCheckmark:hover {
+    color: #13db27;
+    cursor: pointer;
+}

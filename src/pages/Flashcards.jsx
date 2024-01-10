@@ -15,18 +15,15 @@ export default function Flashcards() {
   vocabAmount = parseInt(vocabAmount);
 
   const [vocabLeft, setVocabLeft] = useState(vocabAmount);
-  const [wordIndex, setWordIndex] = useState();
+  const [wordIndex, setWordIndex] = useState(getRandomWordIndex());
   const [wordsToLearn, setWordsToLearn] = useState([]);
-
-  useEffect(() => {
-    setWordIndex(getRandomWordIndex());
-  }, [])
+  const [cardFlipped, setCardFlipped] = useState(false);
 
   return (
     <div className={flashcardStyles.pageContainer}>
       <h1>Vocab Left: {vocabLeft}</h1>
-      <div className={flashcardStyles.flashcardContainer}>
-        <h2>{wordList[getRandomWordIndex()].spanish}</h2>
+      <div className={flashcardStyles.flashcardContainer} onClick={() => setCardFlipped(!cardFlipped)}>
+        <h2>{cardFlipped ? wordList[wordIndex].english : wordList[wordIndex].spanish}</h2>
       </div>
       <div className={flashcardStyles.wordConfirmationContainer}>
         <button className={flashcardStyles.wordPassButton}>

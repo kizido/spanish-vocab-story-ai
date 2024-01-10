@@ -9,7 +9,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigate to="/introduction" replace />}/>
       <Route path="/introduction" element={<VocabAmountForm/>}/>
-      <Route path="/flashcards" element={<Flashcards/>}/>
+      <Route path="/flashcards-:vocabAmount" element={<Flashcards/>}/>
     </Routes>
   );
 }

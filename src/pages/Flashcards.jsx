@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import wordList from "../vocab_lists/spanishnouns.json";
 import * as flashcardStyles from "../style/Flashcards.module.css";
 
@@ -11,6 +11,8 @@ const getRandomWordIndex = () => {
 };
 
 export default function Flashcards() {
+  let navigate = useNavigate();
+
   let { vocabAmount } = useParams();
   vocabAmount = parseInt(vocabAmount);
 
@@ -21,6 +23,9 @@ export default function Flashcards() {
 
   useEffect(() => {
     console.log(wordsToLearn);
+    if(vocabLeft < 1) {
+      navigate(`/story/${wordsToLearn}`)
+    }
   }, [wordsToLearn]);
 
   return (
@@ -49,7 +54,7 @@ export default function Flashcards() {
         <button
           className={flashcardStyles.wordConfirmButton}
           onClick={() => {
-            setWordsToLearn([...wordsToLearn, wordIndex]);
+            setWordsToLearn([...wordsToLearn, wordList[wordIndex].spanish]);
             setVocabLeft(vocabLeft - 1);
             setWordIndex(getRandomWordIndex());
             setCardFlipped(false);

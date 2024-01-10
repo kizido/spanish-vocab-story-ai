@@ -1,0 +1,598 @@
+[
+    {
+        "spanish": "tiempo",
+        "english": "time"
+    },
+    {
+        "spanish": "hombre",
+        "english": "man"
+    },
+    {
+        "spanish": "camino",
+        "english": "way"
+    },
+    {
+        "spanish": "gente",
+        "english": "people"
+    },
+    {
+        "spanish": "vida",
+        "english": "life"
+    },
+    {
+        "spanish": "día",
+        "english": "day"
+    },
+    {
+        "spanish": "trabajo",
+        "english": "work"
+    },
+    {
+        "spanish": "llamada",
+        "english": "call"
+    },
+    {
+        "spanish": "noche",
+        "english": "night"
+    },
+    {
+        "spanish": "hogar",
+        "english": "home"
+    },
+    {
+        "spanish": "pensamiento",
+        "english": "thought"
+    },
+    {
+        "spanish": "dinero",
+        "english": "money"
+    },
+    {
+        "spanish": "nombre",
+        "english": "name"
+    },
+    {
+        "spanish": "padre",
+        "english": "father"
+    },
+    {
+        "spanish": "chico",
+        "english": "guy"
+    },
+    {
+        "spanish": "lugar",
+        "english": "place"
+    },
+    {
+        "spanish": "sentimiento",
+        "english": "feel"
+    },
+    {
+        "spanish": "chica",
+        "english": "girl"
+    },
+    {
+        "spanish": "casa",
+        "english": "house"
+    },
+    {
+        "spanish": "izquierda",
+        "english": "left"
+    },
+    {
+        "spanish": "derecha",
+        "english": "right"
+    },
+    {
+        "spanish": "madre",
+        "english": "mother"
+    },
+    {
+        "spanish": "curso",
+        "english": "course"
+    },
+    {
+        "spanish": "papá",
+        "english": "dad"
+    },
+    {
+        "spanish": "mundo",
+        "english": "world"
+    },
+    {
+        "spanish": "hijo",
+        "english": "son"
+    },
+    {
+        "spanish": "carro",
+        "english": "car"
+    },
+    {
+        "spanish": "mujer",
+        "english": "woman"
+    },
+    {
+        "spanish": "amigo/amiga",
+        "english": "friend"
+    },
+    {
+        "spanish": "mente",
+        "english": "mind"
+    },
+    {
+        "spanish": "cabeza",
+        "english": "head"
+    },
+    {
+        "spanish": "mamá",
+        "english": "mom"
+    },
+    {
+        "spanish": "niño",
+        "english": "boy"
+    },
+    {
+        "spanish": "trabajo",
+        "english": "job"
+    },
+    {
+        "spanish": "bebé",
+        "english": "baby"
+    },
+    {
+        "spanish": "familia",
+        "english": "family"
+    },
+    {
+        "spanish": "habitación",
+        "english": "room"
+    },
+    {
+        "spanish": "hermano",
+        "english": "brother"
+    },
+    {
+        "spanish": "cabeza",
+        "english": "head"
+    },
+    {
+        "spanish": "idea",
+        "english": "idea"
+    },
+    {
+        "spanish": "esposa",
+        "english": "wife"
+    },
+    {
+        "spanish": "inicio",
+        "english": "start"
+    },
+    {
+        "spanish": "puerta",
+        "english": "door"
+    },
+    {
+        "spanish": "pedazo",
+        "english": "bit"
+    },
+    {
+        "spanish": "materia",
+        "english": "matter"
+    },
+    {
+        "spanish": "carrera",
+        "english": "run"
+    },
+    {
+        "spanish": "escuela",
+        "english": "school"
+    },
+    {
+        "spanish": "juego",
+        "english": "play"
+    },
+    {
+        "spanish": "problema",
+        "english": "problem"
+    },
+    {
+        "spanish": "fin",
+        "english": "end"
+    },
+    {
+        "spanish": "teléfono",
+        "english": "phone"
+    },
+    {
+        "spanish": "esperanza",
+        "english": "hope"
+    },
+    {
+        "spanish": "excusa",
+        "english": "excuse"
+    },
+    {
+        "spanish": "cara",
+        "english": "face"
+    },
+    {
+        "spanish": "turno",
+        "english": "turn"
+    },
+    {
+        "spanish": "policía",
+        "english": "police"
+    },
+    {
+        "spanish": "corazón",
+        "english": "heart"
+    },
+    {
+        "spanish": "preocupación",
+        "english": "worry"
+    },
+    {
+        "spanish": "negocio",
+        "english": "business"
+    },
+    {
+        "spanish": "reloj",
+        "english": "watch"
+    },
+    {
+        "spanish": "año",
+        "english": "year"
+    },
+    {
+        "spanish": "mano",
+        "english": "hand"
+    },
+    {
+        "spanish": "médico",
+        "english": "doctor"
+    },
+    {
+        "spanish": "sentada",
+        "english": "sit"
+    },
+    {
+        "spanish": "segundo",
+        "english": "second"
+    },
+    {
+        "spanish": "pago",
+        "english": "pay"
+    },
+    {
+        "spanish": "agua",
+        "english": "water"
+    },
+    {
+        "spanish": "muerte",
+        "english": "death"
+    },
+    {
+        "spanish": "cosas",
+        "english": "stuff"
+    },
+    {
+        "spanish": "minuto",
+        "english": "minute"
+    },
+    {
+        "spanish": "parte",
+        "english": "part"
+    },
+    {
+        "spanish": "persona",
+        "english": "person"
+    },
+    {
+        "spanish": "bebida",
+        "english": "drink"
+    },
+    {
+        "spanish": "cambio",
+        "english": "change"
+    },
+    {
+        "spanish": "golpe",
+        "english": "hit"
+    },
+    {
+        "spanish": "cheque",
+        "english": "check"
+    },
+    {
+        "spanish": "música",
+        "english": "music"
+    },
+    {
+        "spanish": "interior",
+        "english": "inside"
+    },
+    {
+        "spanish": "sueño",
+        "english": "sleep"
+    },
+    {
+        "spanish": "mío/mía",
+        "english": "mine"
+    },
+    {
+        "spanish": "acuerdo",
+        "english": "deal"
+    },
+    {
+        "spanish": "punto",
+        "english": "point"
+    },
+    {
+        "spanish": "cuerpo",
+        "english": "body"
+    },
+    {
+        "spanish": "querido/querida",
+        "english": "dear"
+    },
+    {
+        "spanish": "oportunidad",
+        "english": "chance"
+    },
+    {
+        "spanish": "cierre",
+        "english": "close"
+    },
+    {
+        "spanish": "fiesta",
+        "english": "party"
+    },
+    {
+        "spanish": "hija",
+        "english": "daughter"
+    },
+    {
+        "spanish": "palabra",
+        "english": "word"
+    },
+    {
+        "spanish": "diversión",
+        "english": "fun"
+    },
+    {
+        "spanish": "número",
+        "english": "number"
+    },
+    {
+        "spanish": "historia",
+        "english": "story"
+    },
+    {
+        "spanish": "conjunto",
+        "english": "set"
+    },
+    {
+        "spanish": "deseo",
+        "english": "wish"
+    },
+    {
+        "spanish": "esposo",
+        "english": "husband"
+    },
+    {
+        "spanish": "fuego",
+        "english": "fire"
+    },
+    {
+        "spanish": "pelea",
+        "english": "fight"
+    },
+    {
+        "spanish": "descanso",
+        "english": "rest"
+    },
+    {
+        "spanish": "momento",
+        "english": "moment"
+    },
+    {
+        "spanish": "semana",
+        "english": "week"
+    },
+    {
+        "spanish": "soporte",
+        "english": "stand"
+    },
+    {
+        "spanish": "juego",
+        "english": "game"
+    },
+    {
+        "spanish": "corte",
+        "english": "cut"
+    },
+    {
+        "spanish": "hermana",
+        "english": "sister"
+    },
+    {
+        "spanish": "niño/niña",
+        "english": "child"
+    },
+    {
+        "spanish": "lado",
+        "english": "side"
+    },
+    {
+        "spanish": "sangre",
+        "english": "blood"
+    },
+    {
+        "spanish": "verdad",
+        "english": "truth"
+    },
+    {
+        "spanish": "dama",
+        "english": "lady"
+    },
+    {
+        "spanish": "disparo",
+        "english": "shot"
+    },
+    {
+        "spanish": "guerra",
+        "english": "war"
+    },
+    {
+        "spanish": "ruptura",
+        "english": "break"
+    },
+    {
+        "spanish": "paseo",
+        "english": "walk"
+    },
+    {
+        "spanish": "razón",
+        "english": "reason"
+    },
+    {
+        "spanish": "problema",
+        "english": "trouble"
+    },
+    {
+        "spanish": "ciudad",
+        "english": "city"
+    },
+    {
+        "spanish": "pueblo",
+        "english": "town"
+    },
+    {
+        "spanish": "confianza",
+        "english": "trust"
+    },
+    {
+        "spanish": "pregunta",
+        "english": "question"
+    },
+    {
+        "spanish": "oficina",
+        "english": "office"
+    },
+    {
+        "spanish": "mitad",
+        "english": "half"
+    },
+    {
+        "spanish": "bienvenida",
+        "english": "welcome"
+    },
+    {
+        "spanish": "pareja",
+        "english": "couple"
+    },
+    {
+        "spanish": "prisa",
+        "english": "hurry"
+    },
+    {
+        "spanish": "cariño",
+        "english": "honey"
+    },
+    {
+        "spanish": "poder",
+        "english": "power"
+    },
+    {
+        "spanish": "cama",
+        "english": "bed"
+    },
+    {
+        "spanish": "frente",
+        "english": "front"
+    },
+    {
+        "spanish": "respuesta",
+        "english": "answer"
+    },
+    {
+        "spanish": "pistola",
+        "english": "gun"
+    },
+    {
+        "spanish": "línea",
+        "english": "line"
+    },
+    {
+        "spanish": "equipo",
+        "english": "team"
+    },
+    {
+        "spanish": "noticias",
+        "english": "news"
+    },
+    {
+        "spanish": "capitán",
+        "english": "captain"
+    },
+    {
+        "spanish": "odio",
+        "english": "hate"
+    },
+    {
+        "spanish": "perro",
+        "english": "dog"
+    },
+    {
+        "spanish": "comida",
+        "english": "food"
+    },
+    {
+        "spanish": "luz",
+        "english": "light"
+    },
+    {
+        "spanish": "orden",
+        "english": "order"
+    },
+    {
+        "spanish": "país",
+        "english": "country"
+    },
+    {
+        "spanish": "elección",
+        "english": "pick"
+    },
+    {
+        "spanish": "hecho",
+        "english": "fact"
+    },
+    {
+        "spanish": "negro",
+        "english": "black"
+    },
+    {
+        "spanish": "jefe",
+        "english": "boss"
+    },
+    {
+        "spanish": "causa",
+        "english": "cause"
+    },
+    {
+        "spanish": "cena",
+        "english": "dinner"
+    },
+    {
+        "spanish": "promesa",
+        "english": "promise"
+    },
+    {
+        "spanish": "plan",
+        "english": "plan"
+    },
+    {
+        "spanish": "tipo",
+        "english": "sort"
+    }
+]

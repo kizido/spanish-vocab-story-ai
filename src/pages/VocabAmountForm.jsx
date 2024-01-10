@@ -21,7 +21,7 @@ export default function VocabAmountForm() {
     setVocabAmount(vocabAmount + 1);
   };
   const goToFlashCards = () => {
-    navigate(`/flashcards-${vocabAmount}`);
+    navigate(`/flashcards/${vocabAmount}`);
   };
   return (
     <div className={styles.vocabAmountSection}>

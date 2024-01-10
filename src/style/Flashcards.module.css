@@ -1,0 +1,50 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    height: 100vh;
+}
+
+.flashcardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    min-width: 25rem;
+    height: 40%;
+    min-height: 20rem;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.flashcardContainer h2 {
+    font-size: 2em;
+}
+
+.wordConfirmationContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 35%;
+    min-width: 25rem;
+}
+.wordConfirmationContainer button {
+    font-size: 1.5em;
+    border: 1px solid black;
+    width: 12rem;
+    gap: 1rem;
+    background-color: rgb(240, 243, 255);
+}
+.wordPassButton {
+    color: rgb(163, 39, 39);
+}
+.wordConfirmButton {
+    color: rgb(12, 105, 12);
+}
+.wordPassButton:hover, .wordConfirmButton:hover {
+    background-color: rgb(215, 219, 237);
+}

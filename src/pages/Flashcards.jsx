@@ -8,7 +8,7 @@ const getRandomInt = (max) => {
 };
 const getRandomWordIndex = () => {
   return getRandomInt(wordList.length);
-}
+};
 
 export default function Flashcards() {
   let { vocabAmount } = useParams();
@@ -19,17 +19,42 @@ export default function Flashcards() {
   const [wordsToLearn, setWordsToLearn] = useState([]);
   const [cardFlipped, setCardFlipped] = useState(false);
 
+  useEffect(() => {
+    console.log(wordsToLearn);
+  }, [wordsToLearn]);
+
   return (
     <div className={flashcardStyles.pageContainer}>
       <h1>Vocab Left: {vocabLeft}</h1>
-      <div className={flashcardStyles.flashcardContainer} onClick={() => setCardFlipped(!cardFlipped)}>
-        <h2>{cardFlipped ? wordList[wordIndex].english : wordList[wordIndex].spanish}</h2>
+      <div
+        className={flashcardStyles.flashcardContainer}
+        onClick={() => setCardFlipped(!cardFlipped)}
+      >
+        <h2>
+          {cardFlipped
+            ? wordList[wordIndex].english
+            : wordList[wordIndex].spanish}
+        </h2>
       </div>
       <div className={flashcardStyles.wordConfirmationContainer}>
-        <button className={flashcardStyles.wordPassButton}>
+        <button
+          className={flashcardStyles.wordPassButton}
+          onClick={() => {
+            setWordIndex(getRandomWordIndex);
+            setCardFlipped(false);
+          }}
+        >
           I know this already...
         </button>
-        <button className={flashcardStyles.wordConfirmButton}>
+        <button
+          className={flashcardStyles.wordConfirmButton}
+          onClick={() => {
+            setWordsToLearn([...wordsToLearn, wordIndex]);
+            setVocabLeft(vocabLeft - 1);
+            setWordIndex(getRandomWordIndex());
+            setCardFlipped(false);
+          }}
+        >
           Let's learn it!
         </button>
       </div>

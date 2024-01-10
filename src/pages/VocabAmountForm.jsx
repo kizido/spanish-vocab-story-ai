@@ -8,8 +8,9 @@ import {
 import { useNavigate } from "react-router-dom";
 
 export default function VocabAmountForm() {
-  let navigate = useNavigate();
   const [vocabAmount, setVocabAmount] = useState(5);
+
+  let navigate = useNavigate();
 
   const decrementVocabAmount = () => {
     if (vocabAmount > 1) {
@@ -20,7 +21,7 @@ export default function VocabAmountForm() {
     setVocabAmount(vocabAmount + 1);
   };
   const goToFlashCards = () => {
-    navigate("/flashcards");
+    navigate(`/flashcards-${vocabAmount}`);
   };
   return (
     <div className={styles.vocabAmountSection}>

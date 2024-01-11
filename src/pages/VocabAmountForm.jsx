@@ -18,7 +18,9 @@ export default function VocabAmountForm() {
     }
   };
   const incrementVocabAmount = () => {
-    setVocabAmount(vocabAmount + 1);
+    if(vocabAmount < 10) {
+      setVocabAmount(vocabAmount + 1);
+    }
   };
   const goToFlashCards = () => {
     navigate(`/flashcards/${vocabAmount}`);

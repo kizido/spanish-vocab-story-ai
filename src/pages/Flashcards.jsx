@@ -24,7 +24,7 @@ export default function Flashcards() {
   useEffect(() => {
     console.log(wordsToLearn);
     if(vocabLeft < 1) {
-      navigate(`/story/${wordsToLearn}`)
+      navigate(`/story/${encodeURIComponent(wordsToLearn)}`)
     }
   }, [wordsToLearn]);
 

@@ -1,598 +1,747 @@
 [
     {
         "spanish": "tiempo",
-        "english": "time"
+        "english": "time",
+        "wordClass": "noun"
     },
     {
         "spanish": "hombre",
-        "english": "man"
+        "english": "man",
+        "wordClass": "noun"
     },
     {
         "spanish": "camino",
-        "english": "way"
+        "english": "way",
+        "wordClass": "noun"
     },
     {
         "spanish": "gente",
-        "english": "people"
+        "english": "people",
+        "wordClass": "noun"
     },
     {
         "spanish": "vida",
-        "english": "life"
+        "english": "life",
+        "wordClass": "noun"
     },
     {
         "spanish": "día",
-        "english": "day"
+        "english": "day",
+        "wordClass": "noun"
     },
     {
         "spanish": "trabajo",
-        "english": "work"
+        "english": "work",
+        "wordClass": "noun"
     },
     {
         "spanish": "llamada",
-        "english": "call"
+        "english": "call",
+        "wordClass": "noun"
     },
     {
         "spanish": "noche",
-        "english": "night"
+        "english": "night",
+        "wordClass": "noun"
     },
     {
         "spanish": "hogar",
-        "english": "home"
+        "english": "home",
+        "wordClass": "noun"
     },
     {
         "spanish": "pensamiento",
-        "english": "thought"
+        "english": "thought",
+        "wordClass": "noun"
     },
     {
         "spanish": "dinero",
-        "english": "money"
+        "english": "money",
+        "wordClass": "noun"
     },
     {
         "spanish": "nombre",
-        "english": "name"
+        "english": "name",
+        "wordClass": "noun"
     },
     {
         "spanish": "padre",
-        "english": "father"
+        "english": "father",
+        "wordClass": "noun"
     },
     {
         "spanish": "chico",
-        "english": "guy"
+        "english": "guy",
+        "wordClass": "noun"
     },
     {
         "spanish": "lugar",
-        "english": "place"
+        "english": "place",
+        "wordClass": "noun"
     },
     {
         "spanish": "sentimiento",
-        "english": "feel"
+        "english": "feel",
+        "wordClass": "noun"
     },
     {
         "spanish": "chica",
-        "english": "girl"
+        "english": "girl",
+        "wordClass": "noun"
     },
     {
         "spanish": "casa",
-        "english": "house"
+        "english": "house",
+        "wordClass": "noun"
     },
     {
         "spanish": "izquierda",
-        "english": "left"
+        "english": "left",
+        "wordClass": "noun"
     },
     {
         "spanish": "derecha",
-        "english": "right"
+        "english": "right",
+        "wordClass": "noun"
     },
     {
         "spanish": "madre",
-        "english": "mother"
+        "english": "mother",
+        "wordClass": "noun"
     },
     {
         "spanish": "curso",
-        "english": "course"
+        "english": "course",
+        "wordClass": "noun"
     },
     {
         "spanish": "papá",
-        "english": "dad"
+        "english": "dad",
+        "wordClass": "noun"
     },
     {
         "spanish": "mundo",
-        "english": "world"
+        "english": "world",
+        "wordClass": "noun"
     },
     {
         "spanish": "hijo",
-        "english": "son"
+        "english": "son",
+        "wordClass": "noun"
     },
     {
         "spanish": "carro",
-        "english": "car"
+        "english": "car",
+        "wordClass": "noun"
     },
     {
         "spanish": "mujer",
-        "english": "woman"
+        "english": "woman",
+        "wordClass": "noun"
     },
     {
         "spanish": "amigo/amiga",
-        "english": "friend"
+        "english": "friend",
+        "wordClass": "noun"
     },
     {
         "spanish": "mente",
-        "english": "mind"
+        "english": "mind",
+        "wordClass": "noun"
     },
     {
         "spanish": "cabeza",
-        "english": "head"
+        "english": "head",
+        "wordClass": "noun"
     },
     {
         "spanish": "mamá",
-        "english": "mom"
+        "english": "mom",
+        "wordClass": "noun"
     },
     {
         "spanish": "niño",
-        "english": "boy"
+        "english": "boy",
+        "wordClass": "noun"
     },
     {
         "spanish": "trabajo",
-        "english": "job"
+        "english": "job",
+        "wordClass": "noun"
     },
     {
         "spanish": "bebé",
-        "english": "baby"
+        "english": "baby",
+        "wordClass": "noun"
     },
     {
         "spanish": "familia",
-        "english": "family"
+        "english": "family",
+        "wordClass": "noun"
     },
     {
         "spanish": "habitación",
-        "english": "room"
+        "english": "room",
+        "wordClass": "noun"
     },
     {
         "spanish": "hermano",
-        "english": "brother"
+        "english": "brother",
+        "wordClass": "noun"
     },
     {
         "spanish": "cabeza",
-        "english": "head"
+        "english": "head",
+        "wordClass": "noun"
     },
     {
         "spanish": "idea",
-        "english": "idea"
+        "english": "idea",
+        "wordClass": "noun"
     },
     {
         "spanish": "esposa",
-        "english": "wife"
+        "english": "wife",
+        "wordClass": "noun"
     },
     {
         "spanish": "inicio",
-        "english": "start"
+        "english": "start",
+        "wordClass": "noun"
     },
     {
         "spanish": "puerta",
-        "english": "door"
+        "english": "door",
+        "wordClass": "noun"
     },
     {
         "spanish": "pedazo",
-        "english": "bit"
+        "english": "bit",
+        "wordClass": "noun"
     },
     {
         "spanish": "materia",
-        "english": "matter"
+        "english": "matter",
+        "wordClass": "noun"
     },
     {
         "spanish": "carrera",
-        "english": "run"
+        "english": "run",
+        "wordClass": "noun"
     },
     {
         "spanish": "escuela",
-        "english": "school"
+        "english": "school",
+        "wordClass": "noun"
     },
     {
         "spanish": "juego",
-        "english": "play"
+        "english": "play",
+        "wordClass": "noun"
     },
     {
         "spanish": "problema",
-        "english": "problem"
+        "english": "problem",
+        "wordClass": "noun"
     },
     {
         "spanish": "fin",
-        "english": "end"
+        "english": "end",
+        "wordClass": "noun"
     },
     {
         "spanish": "teléfono",
-        "english": "phone"
+        "english": "phone",
+        "wordClass": "noun"
     },
     {
         "spanish": "esperanza",
-        "english": "hope"
+        "english": "hope",
+        "wordClass": "noun"
     },
     {
         "spanish": "excusa",
-        "english": "excuse"
+        "english": "excuse",
+        "wordClass": "noun"
     },
     {
         "spanish": "cara",
-        "english": "face"
+        "english": "face",
+        "wordClass": "noun"
     },
     {
         "spanish": "turno",
-        "english": "turn"
+        "english": "turn",
+        "wordClass": "noun"
     },
     {
         "spanish": "policía",
-        "english": "police"
+        "english": "police",
+        "wordClass": "noun"
     },
     {
         "spanish": "corazón",
-        "english": "heart"
+        "english": "heart",
+        "wordClass": "noun"
     },
     {
         "spanish": "preocupación",
-        "english": "worry"
+        "english": "worry",
+        "wordClass": "noun"
     },
     {
         "spanish": "negocio",
-        "english": "business"
+        "english": "business",
+        "wordClass": "noun"
     },
     {
         "spanish": "reloj",
-        "english": "watch"
+        "english": "watch",
+        "wordClass": "noun"
     },
     {
         "spanish": "año",
-        "english": "year"
+        "english": "year",
+        "wordClass": "noun"
     },
     {
         "spanish": "mano",
-        "english": "hand"
+        "english": "hand",
+        "wordClass": "noun"
     },
     {
         "spanish": "médico",
-        "english": "doctor"
+        "english": "doctor",
+        "wordClass": "noun"
     },
     {
         "spanish": "sentada",
-        "english": "sit"
+        "english": "sit",
+        "wordClass": "noun"
     },
     {
         "spanish": "segundo",
-        "english": "second"
+        "english": "second",
+        "wordClass": "noun"
     },
     {
         "spanish": "pago",
-        "english": "pay"
+        "english": "pay",
+        "wordClass": "noun"
     },
     {
         "spanish": "agua",
-        "english": "water"
+        "english": "water",
+        "wordClass": "noun"
     },
     {
         "spanish": "muerte",
-        "english": "death"
+        "english": "death",
+        "wordClass": "noun"
     },
     {
         "spanish": "cosas",
-        "english": "stuff"
+        "english": "stuff",
+        "wordClass": "noun"
     },
     {
         "spanish": "minuto",
-        "english": "minute"
+        "english": "minute",
+        "wordClass": "noun"
     },
     {
         "spanish": "parte",
-        "english": "part"
+        "english": "part",
+        "wordClass": "noun"
     },
     {
         "spanish": "persona",
-        "english": "person"
+        "english": "person",
+        "wordClass": "noun"
     },
     {
         "spanish": "bebida",
-        "english": "drink"
+        "english": "drink",
+        "wordClass": "noun"
     },
     {
         "spanish": "cambio",
-        "english": "change"
+        "english": "change",
+        "wordClass": "noun"
     },
     {
         "spanish": "golpe",
-        "english": "hit"
+        "english": "hit",
+        "wordClass": "noun"
     },
     {
         "spanish": "cheque",
-        "english": "check"
+        "english": "check",
+        "wordClass": "noun"
     },
     {
         "spanish": "música",
-        "english": "music"
+        "english": "music",
+        "wordClass": "noun"
     },
     {
         "spanish": "interior",
-        "english": "inside"
+        "english": "inside",
+        "wordClass": "noun"
     },
     {
         "spanish": "sueño",
-        "english": "sleep"
+        "english": "sleep",
+        "wordClass": "noun"
     },
     {
         "spanish": "mío/mía",
-        "english": "mine"
+        "english": "mine",
+        "wordClass": "noun"
     },
     {
         "spanish": "acuerdo",
-        "english": "deal"
+        "english": "deal",
+        "wordClass": "noun"
     },
     {
         "spanish": "punto",
-        "english": "point"
+        "english": "point",
+        "wordClass": "noun"
     },
     {
         "spanish": "cuerpo",
-        "english": "body"
+        "english": "body",
+        "wordClass": "noun"
     },
     {
         "spanish": "querido/querida",
-        "english": "dear"
+        "english": "dear",
+        "wordClass": "noun"
     },
     {
         "spanish": "oportunidad",
-        "english": "chance"
+        "english": "chance",
+        "wordClass": "noun"
     },
     {
         "spanish": "cierre",
-        "english": "close"
+        "english": "close",
+        "wordClass": "noun"
     },
     {
         "spanish": "fiesta",
-        "english": "party"
+        "english": "party",
+        "wordClass": "noun"
     },
     {
         "spanish": "hija",
-        "english": "daughter"
+        "english": "daughter",
+        "wordClass": "noun"
     },
     {
         "spanish": "palabra",
-        "english": "word"
+        "english": "word",
+        "wordClass": "noun"
     },
     {
         "spanish": "diversión",
-        "english": "fun"
+        "english": "fun",
+        "wordClass": "noun"
     },
     {
         "spanish": "número",
-        "english": "number"
+        "english": "number",
+        "wordClass": "noun"
     },
     {
         "spanish": "historia",
-        "english": "story"
+        "english": "story",
+        "wordClass": "noun"
     },
     {
         "spanish": "conjunto",
-        "english": "set"
+        "english": "set",
+        "wordClass": "noun"
     },
     {
         "spanish": "deseo",
-        "english": "wish"
+        "english": "wish",
+        "wordClass": "noun"
     },
     {
         "spanish": "esposo",
-        "english": "husband"
+        "english": "husband",
+        "wordClass": "noun"
     },
     {
         "spanish": "fuego",
-        "english": "fire"
+        "english": "fire",
+        "wordClass": "noun"
     },
     {
         "spanish": "pelea",
-        "english": "fight"
+        "english": "fight",
+        "wordClass": "noun"
     },
     {
         "spanish": "descanso",
-        "english": "rest"
+        "english": "rest",
+        "wordClass": "noun"
     },
     {
         "spanish": "momento",
-        "english": "moment"
+        "english": "moment",
+        "wordClass": "noun"
     },
     {
         "spanish": "semana",
-        "english": "week"
+        "english": "week",
+        "wordClass": "noun"
     },
     {
         "spanish": "soporte",
-        "english": "stand"
+        "english": "stand",
+        "wordClass": "noun"
     },
     {
         "spanish": "juego",
-        "english": "game"
+        "english": "game",
+        "wordClass": "noun"
     },
     {
         "spanish": "corte",
-        "english": "cut"
+        "english": "cut",
+        "wordClass": "noun"
     },
     {
         "spanish": "hermana",
-        "english": "sister"
+        "english": "sister",
+        "wordClass": "noun"
     },
     {
         "spanish": "niño/niña",
-        "english": "child"
+        "english": "child",
+        "wordClass": "noun"
     },
     {
         "spanish": "lado",
-        "english": "side"
+        "english": "side",
+        "wordClass": "noun"
     },
     {
         "spanish": "sangre",
-        "english": "blood"
+        "english": "blood",
+        "wordClass": "noun"
     },
     {
         "spanish": "verdad",
-        "english": "truth"
+        "english": "truth",
+        "wordClass": "noun"
     },
     {
         "spanish": "dama",
-        "english": "lady"
+        "english": "lady",
+        "wordClass": "noun"
     },
     {
         "spanish": "disparo",
-        "english": "shot"
+        "english": "shot",
+        "wordClass": "noun"
     },
     {
         "spanish": "guerra",
-        "english": "war"
+        "english": "war",
+        "wordClass": "noun"
     },
     {
         "spanish": "ruptura",
-        "english": "break"
+        "english": "break",
+        "wordClass": "noun"
     },
     {
         "spanish": "paseo",
-        "english": "walk"
+        "english": "walk",
+        "wordClass": "noun"
     },
     {
         "spanish": "razón",
-        "english": "reason"
+        "english": "reason",
+        "wordClass": "noun"
     },
     {
         "spanish": "problema",
-        "english": "trouble"
+        "english": "trouble",
+        "wordClass": "noun"
     },
     {
         "spanish": "ciudad",
-        "english": "city"
+        "english": "city",
+        "wordClass": "noun"
     },
     {
         "spanish": "pueblo",
-        "english": "town"
+        "english": "town",
+        "wordClass": "noun"
     },
     {
         "spanish": "confianza",
-        "english": "trust"
+        "english": "trust",
+        "wordClass": "noun"
     },
     {
         "spanish": "pregunta",
-        "english": "question"
+        "english": "question",
+        "wordClass": "noun"
     },
     {
         "spanish": "oficina",
-        "english": "office"
+        "english": "office",
+        "wordClass": "noun"
     },
     {
         "spanish": "mitad",
-        "english": "half"
+        "english": "half",
+        "wordClass": "noun"
     },
     {
         "spanish": "bienvenida",
-        "english": "welcome"
+        "english": "welcome",
+        "wordClass": "noun"
     },
     {
         "spanish": "pareja",
-        "english": "couple"
+        "english": "couple",
+        "wordClass": "noun"
     },
     {
         "spanish": "prisa",
-        "english": "hurry"
+        "english": "hurry",
+        "wordClass": "noun"
     },
     {
         "spanish": "cariño",
-        "english": "honey"
+        "english": "honey",
+        "wordClass": "noun"
     },
     {
         "spanish": "poder",
-        "english": "power"
+        "english": "power",
+        "wordClass": "noun"
     },
     {
         "spanish": "cama",
-        "english": "bed"
+        "english": "bed",
+        "wordClass": "noun"
     },
     {
         "spanish": "frente",
-        "english": "front"
+        "english": "front",
+        "wordClass": "noun"
     },
     {
         "spanish": "respuesta",
-        "english": "answer"
+        "english": "answer",
+        "wordClass": "noun"
     },
     {
         "spanish": "pistola",
-        "english": "gun"
+        "english": "gun",
+        "wordClass": "noun"
     },
     {
         "spanish": "línea",
-        "english": "line"
+        "english": "line",
+        "wordClass": "noun"
     },
     {
         "spanish": "equipo",
-        "english": "team"
+        "english": "team",
+        "wordClass": "noun"
     },
     {
         "spanish": "noticias",
-        "english": "news"
+        "english": "news",
+        "wordClass": "noun"
     },
     {
         "spanish": "capitán",
-        "english": "captain"
+        "english": "captain",
+        "wordClass": "noun"
     },
     {
         "spanish": "odio",
-        "english": "hate"
+        "english": "hate",
+        "wordClass": "noun"
     },
     {
         "spanish": "perro",
-        "english": "dog"
+        "english": "dog",
+        "wordClass": "noun"
     },
     {
         "spanish": "comida",
-        "english": "food"
+        "english": "food",
+        "wordClass": "noun"
     },
     {
         "spanish": "luz",
-        "english": "light"
+        "english": "light",
+        "wordClass": "noun"
     },
     {
         "spanish": "orden",
-        "english": "order"
+        "english": "order",
+        "wordClass": "noun"
     },
     {
         "spanish": "país",
-        "english": "country"
+        "english": "country",
+        "wordClass": "noun"
     },
     {
         "spanish": "elección",
-        "english": "pick"
+        "english": "pick",
+        "wordClass": "noun"
     },
     {
         "spanish": "hecho",
-        "english": "fact"
+        "english": "fact",
+        "wordClass": "noun"
     },
     {
         "spanish": "negro",
-        "english": "black"
+        "english": "black",
+        "wordClass": "noun"
     },
     {
         "spanish": "jefe",
-        "english": "boss"
+        "english": "boss",
+        "wordClass": "noun"
     },
     {
         "spanish": "causa",
-        "english": "cause"
+        "english": "cause",
+        "wordClass": "noun"
     },
     {
         "spanish": "cena",
-        "english": "dinner"
+        "english": "dinner",
+        "wordClass": "noun"
     },
     {
         "spanish": "promesa",
-        "english": "promise"
+        "english": "promise",
+        "wordClass": "noun"
     },
     {
         "spanish": "plan",
-        "english": "plan"
+        "english": "plan",
+        "wordClass": "noun"
     },
     {
         "spanish": "tipo",
-        "english": "sort"
+        "english": "sort",
+        "wordClass": "noun"
     }
 ]

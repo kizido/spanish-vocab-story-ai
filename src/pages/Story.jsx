@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import OpenAI from "openai";
 import * as storyStyles from "../style/Story.module.css";
@@ -12,14 +12,18 @@ const openai = new OpenAI({
 export default function Story() {
   const { wordsToLearn } = useParams();
   const words = decodeURIComponent(wordsToLearn);
+  const wordsArray = words.split(/[,/]+/);
   const [story, setStory] = useState(
-    "Había una vez una chica llamada Ana. Un día, ella decidió ir de aventura. Al inicio, caminó mucho pero luego vio un carro. Ana pensó: ¡Qué suerte! y subió al carro. Condujo por el bosque, cantando y riendo. De repente, el carro se paró. Ana miró el motor y vio que estaba roto. ¡Oh no! Estaba perdida en medio del bosque. Pero la chica no se preocupó, ella era valiente. Decidió explorar y encontró un río. Vio un bote y pensó: ¡Lo usaré para escapar! Ana remó y remó hasta llegar a casa. Su mamá se alegró mucho de verla sana y salva. Desde ese día, Ana aprendió que aventurarse sola no siempre es seguro. Y prometió siempre revisar su carro antes de salir."
+    "En el corazón de la ciudad, había un pequeño negocio conocido por todos. La gente acudía cada día, atraída por su encanto y sus productos únicos. Un día, un golpe fuerte sorprendió a todos: la puerta se cerró de repente con el viento. Desde ese momento, el negocio se convirtió en leyenda, un lugar donde la gente se reunía no solo para comprar, sino para compartir historias y sonrisas."
   );
   const [storyLoading, setStoryLoading] = useState(true);
 
   useEffect(() => {
     generateChat();
-  }, [])
+  }, []);
+  useEffect(() => {
+    processStory();
+  }, [story])
 
   const generateChat = async () => {
     setStoryLoading(true);
@@ -46,9 +50,38 @@ export default function Story() {
       setStoryLoading(false);
     }
   };
+  const printWords = () => {
+    console.log(wordsArray);
+  };
+  const processStory = () => {
+    // Split story into words and process each word
+    const processedStory = story.split(/\s+/).map((word, index) => {
+      // Remove punctuation for comparison, but keep original word for display
+      const wordToCheck = word.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, "");
+      const key = `${word}-${index}`;
+      const isHighlighted = wordsArray.includes(wordToCheck.toLowerCase());
+
+      // Check if word should be highlighted
+        return (
+          <span key={key} className={isHighlighted ? `${storyStyles.storyText} ${storyStyles.wordLearning}` : storyStyles.storyText}>
+            {word}
+          </span>
+        );
+    });
+
+    // Combine words into a single JSX element, preserving spaces
+    return processedStory.reduce((acc, curr) => (
+      <>
+        {acc} {curr}{" "}
+      </>
+    ));
+  };
 
   return (
     <div className={storyStyles.pageContainer}>
+      {/* <div className={storyStyles.storyContainer}>
+        {processStory(story, wordsArray)}
+      </div> */}
       {storyLoading ? (
         <div className={storyStyles.spinnerContainer}>
           <h2>Spanish story generating...</h2>
@@ -56,7 +89,7 @@ export default function Story() {
         </div>
       ) : (
         <div className={storyStyles.storyContainer}>
-          <p>{story}</p>
+          {processStory()}
         </div>
       )}
     </div>

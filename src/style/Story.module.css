@@ -12,9 +12,13 @@
   min-width: 20rem;
   padding: 2rem;
 }
-.storyContainer p {
+.storyText {
   font-size: 1.5em;
   font-weight: 500;
+}
+.wordLearning {
+    color: blue;
+    font-weight: bold;
 }
 
 .spinnerContainer {

@@ -3,6 +3,7 @@ import { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import OpenAI from "openai";
 import * as storyStyles from "../style/Story.module.css";
+import frequencyList from "../vocab_lists/spanishfrequency.json";
 
 const openai = new OpenAI({
   apiKey: import.meta.env.VITE_OPENAIKEY,
@@ -18,13 +19,42 @@ export default function Story() {
   );
   const [storyLoading, setStoryLoading] = useState(true);
 
-  useEffect(() => {
-    generateChat();
-  }, []);
-  useEffect(() => {
-    processStory();
-  }, [story])
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [showTranslationBox, setShowTranslationBox] = useState(false);
+  const [wordTranslation, setWordTranslation] = useState("");
 
+  // useEffect(() => {
+  //   generateChat();
+  // }, []);
+  // useEffect(() => {
+  //   processStory();
+  // }, [story])
+
+  const handleMouseEnter = (e, word) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+    setShowTranslationBox(true);
+    const foundWord = frequencyList.find((item) => item.spanish == word);
+    if (foundWord != undefined) {
+      setWordTranslation(foundWord.english);
+    } else {
+      setWordTranslation("N/A");
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setShowTranslationBox(false);
+  };
+  const boxStyle = {
+    position: "fixed",
+    left: `${mousePosition.x}px`,
+    top: `${mousePosition.y}px`,
+    width: "8rem",
+    height: "5rem",
+    backgroundColor: "white",
+    display: showTranslationBox ? "block" : "none",
+    transform: "translate(-50%, -125%)",
+    pointerEvents: "none", // To prevent the box from interfering with the mouse events
+  };
   const generateChat = async () => {
     setStoryLoading(true);
     try {
@@ -34,7 +64,7 @@ export default function Story() {
           {
             role: "system",
             content:
-              "I want you to tell a story using only elementary and below spanish that is less than 175 words. You must include the following words: " +
+              "I want you to tell a story using only elementary and below spanish, and only using present tense verbs. Use less than 200 tokens. You must include the following words: " +
               words,
           },
         ],
@@ -50,9 +80,7 @@ export default function Story() {
       setStoryLoading(false);
     }
   };
-  const printWords = () => {
-    console.log(wordsArray);
-  };
+
   const processStory = () => {
     // Split story into words and process each word
     const processedStory = story.split(/\s+/).map((word, index) => {
@@ -62,11 +90,20 @@ export default function Story() {
       const isHighlighted = wordsArray.includes(wordToCheck.toLowerCase());
 
       // Check if word should be highlighted
-        return (
-          <span key={key} className={isHighlighted ? `${storyStyles.storyText} ${storyStyles.wordLearning}` : storyStyles.storyText}>
-            {word}
-          </span>
-        );
+      return (
+        <span
+          key={key}
+          className={
+            isHighlighted
+              ? `${storyStyles.storyText} ${storyStyles.wordLearning}`
+              : `${storyStyles.storyText}`
+          }
+          onMouseEnter={(e) => handleMouseEnter(e, word)}
+          onMouseLeave={handleMouseLeave}
+        >
+          {word}
+        </span>
+      );
     });
 
     // Combine words into a single JSX element, preserving spaces
@@ -79,10 +116,11 @@ export default function Story() {
 
   return (
     <div className={storyStyles.pageContainer}>
-      {/* <div className={storyStyles.storyContainer}>
-        {processStory(story, wordsArray)}
-      </div> */}
-      {storyLoading ? (
+      <div style={boxStyle}>
+        <p>{wordTranslation}</p>
+      </div>
+      <div className={storyStyles.storyContainer}>{processStory()}</div>
+      {/* {storyLoading ? (
         <div className={storyStyles.spinnerContainer}>
           <h2>Spanish story generating...</h2>
           <div className={storyStyles.spinner}></div>
@@ -91,7 +129,7 @@ export default function Story() {
         <div className={storyStyles.storyContainer}>
           {processStory()}
         </div>
-      )}
+      )} */}
     </div>
   );
 }

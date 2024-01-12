@@ -9,8 +9,10 @@
 
 .flashcardContainer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     width: 35%;
     min-width: 25rem;
     height: 40%;
@@ -18,12 +20,30 @@
     border: 1px solid black;
     background-color: white;
     cursor: pointer;
-    margin-left: 1rem;
-    margin-right: 1rem;
     user-select: none;
 }
+.flashcardContainer h2, .flashcardContainer h3 {
+    margin: 0;
+}
 .flashcardContainer h2 {
+    line-height: 1;
     font-size: 2em;
+}
+.flashcardContainer h3 {
+    line-height: 1.3;
+}
+.flashcardContainer div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+.flashcardContainer h4 {
+    margin: 1rem;
+}
+.flashcardContainer h4, .wordClass {
+    font-size: 1.2em;
+    color: rgb(102, 102, 102);
 }
 
 .wordConfirmationContainer {

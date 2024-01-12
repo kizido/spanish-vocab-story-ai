@@ -23,8 +23,8 @@ export default function Flashcards() {
 
   useEffect(() => {
     console.log(wordsToLearn);
-    if(vocabLeft < 1) {
-      navigate(`/story/${encodeURIComponent(wordsToLearn)}`)
+    if (vocabLeft < 1) {
+      navigate(`/story/${encodeURIComponent(wordsToLearn)}`);
     }
   }, [wordsToLearn]);
 
@@ -35,11 +35,18 @@ export default function Flashcards() {
         className={flashcardStyles.flashcardContainer}
         onClick={() => setCardFlipped(!cardFlipped)}
       >
-        <h2>
-          {cardFlipped
-            ? wordList[wordIndex].english
-            : wordList[wordIndex].spanish}
-        </h2>
+        <h4></h4>
+        <div>
+          <h3 className={flashcardStyles.wordClass}>
+            ({wordList[wordIndex].wordClass})
+          </h3>
+          <h2>
+            {cardFlipped
+              ? wordList[wordIndex].english
+              : wordList[wordIndex].spanish}
+          </h2>
+        </div>
+        <h4>{cardFlipped ? "english" : "español"}</h4>
       </div>
       <div className={flashcardStyles.wordConfirmationContainer}>
         <button
@@ -63,10 +70,6 @@ export default function Flashcards() {
           Let's learn it!
         </button>
       </div>
-      {/* <h1>Current Word: {word ?? 'N/A'}</h1>
-      <button onClick={() => setWord(wordList[getRandomInt(wordList.length)].spanish)}>
-        Select New Word
-      </button> */}
     </div>
   );
 }

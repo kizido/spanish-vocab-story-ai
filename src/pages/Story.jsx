@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import OpenAI from "openai";
 import * as storyStyles from "../style/Story.module.css";
@@ -30,7 +30,36 @@ export default function Story() {
   //   processStory();
   // }, [story])
 
-  const handleMouseEnter = (e, word) => {
+  const translateText = async (text, targetLang) => {
+    const endpoint = "https://translation.googleapis.com/language/translate/v2";
+    const params = new URLSearchParams({
+      key: import.meta.env.VITE_GOOGLE_CLOUD_TRANSLATION_API_KEY,
+    });
+
+    const data = {
+      q: text,
+      target: targetLang,
+      source: "es", // Optional: remove if you want Google to auto-detect the source language
+    };
+
+    const headers = {
+      "Content-Type": "application/json",
+    };
+
+    try {
+      const response = await axios.post(
+        `${endpoint}?${params.toString()}`,
+        data,
+        { headers }
+      );
+      return response.data.data.translations[0].translatedText;
+    } catch (error) {
+      console.error("Error during translation:", error);
+      return null;
+    }
+  };
+
+  const handleMouseDown = (e, word) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
     setShowTranslationBox(true);
     word = word.toLowerCase();
@@ -38,12 +67,13 @@ export default function Story() {
     if (foundWord != undefined) {
       setWordTranslation(foundWord.english);
     } else {
-      setWordTranslation("N/A");
+      translateText(word, "en").then(translation => setWordTranslation(translation));
     }
   };
 
   const handleMouseLeave = () => {
     setShowTranslationBox(false);
+    setWordTranslation("");
   };
   const boxStyle = {
     position: "fixed",
@@ -99,7 +129,7 @@ export default function Story() {
               ? `${storyStyles.storyText} ${storyStyles.wordLearning}`
               : `${storyStyles.storyText}`
           }
-          onMouseEnter={(e) => handleMouseEnter(e, word)}
+          onMouseDown={(e) => handleMouseDown(e, word)}
           onMouseLeave={handleMouseLeave}
         >
           {word}

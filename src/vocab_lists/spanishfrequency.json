@@ -16,6 +16,14 @@
     "english": "that"
   },
   {
+    "spanish": "en",
+    "english": "in/on/at"
+  },
+  {
+    "spanish": "el",
+    "english": "the"
+  },
+  {
     "spanish": "él",
     "english": "he"
   },
@@ -26,10 +34,6 @@
   {
     "spanish": "para",
     "english": "for"
-  },
-  {
-    "spanish": "en",
-    "english": "on"
   },
   {
     "spanish": "son",
@@ -46,10 +50,6 @@
   {
     "spanish": "ser",
     "english": "be"
-  },
-  {
-    "spanish": "en",
-    "english": "at"
   },
   {
     "spanish": "uno",
@@ -69,7 +69,7 @@
   },
   {
     "spanish": "por",
-    "english": "by"
+    "english": "for/by"
   },
   {
     "spanish": "caliente",
@@ -130,10 +130,6 @@
   {
     "spanish": "un",
     "english": "a"
-  },
-  {
-    "spanish": "en",
-    "english": "in"
   },
   {
     "spanish": "nos",
@@ -2592,7 +2588,7 @@
     "english": "save"
   },
   {
-    "spanish": "el control",
+    "spanish": "control",
     "english": "control"
   },
   {

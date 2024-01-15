@@ -33,6 +33,7 @@ export default function Story() {
   const handleMouseEnter = (e, word) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
     setShowTranslationBox(true);
+    word = word.toLowerCase();
     const foundWord = frequencyList.find((item) => item.spanish == word);
     if (foundWord != undefined) {
       setWordTranslation(foundWord.english);

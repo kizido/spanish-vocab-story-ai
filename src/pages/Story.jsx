@@ -23,12 +23,12 @@ export default function Story() {
   const [showTranslationBox, setShowTranslationBox] = useState(false);
   const [wordTranslation, setWordTranslation] = useState("");
 
-  // useEffect(() => {
-  //   generateChat();
-  // }, []);
-  // useEffect(() => {
-  //   processStory();
-  // }, [story])
+  useEffect(() => {
+    generateChat();
+  }, []);
+  useEffect(() => {
+    processStory();
+  }, [story])
 
   const translateText = async (text, targetLang) => {
     const endpoint = "https://translation.googleapis.com/language/translate/v2";
@@ -95,12 +95,12 @@ export default function Story() {
           {
             role: "system",
             content:
-              "I want you to tell a story using only elementary and below spanish, and only using present tense verbs. Use less than 200 tokens. You must include the following words: " +
-              words,
+            "In no more than 150 words, please create a short story in Spanish, suitable for beginner learners. The story must use only elementary-level vocabulary and simple sentences. It is crucial that the entire story is written in the present tense, without any past or future tense verbs. Please include these words: " + words + ". The story should be engaging but simple, designed for someone just starting to learn Spanish. Remember, only use present tense verbs to keep the story easy to understand."
+
           },
         ],
         temperature: 0.8,
-        max_tokens: 250,
+        max_tokens: 300,
       });
       console.log("Response:", chatCompletion); // Log the entire response
       setStory(chatCompletion.choices[0].message.content); // Accessing the content correctly
@@ -150,8 +150,8 @@ export default function Story() {
       <div style={boxStyle}>
         <p>{wordTranslation}</p>
       </div>
-      <div className={storyStyles.storyContainer}>{processStory()}</div>
-      {/* {storyLoading ? (
+      {/* <div className={storyStyles.storyContainer}>{processStory()}</div> */}
+      {storyLoading ? (
         <div className={storyStyles.spinnerContainer}>
           <h2>Spanish story generating...</h2>
           <div className={storyStyles.spinner}></div>
@@ -160,7 +160,7 @@ export default function Story() {
         <div className={storyStyles.storyContainer}>
           {processStory()}
         </div>
-      )} */}
+      )}
     </div>
   );
 }

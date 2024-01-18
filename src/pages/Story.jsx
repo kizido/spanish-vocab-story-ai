@@ -11,12 +11,11 @@ const openai = new OpenAI({
 });
 
 export default function Story() {
-  const { wordsToLearn } = useParams();
+  const { skillLevel, wordsToLearn } = useParams();
   const words = decodeURIComponent(wordsToLearn);
   const wordsArray = words.split(/[,/]+/);
-  const [story, setStory] = useState(
-    "En el corazón de la ciudad, había un pequeño negocio conocido por todos. La gente acudía cada día, atraída por su encanto y sus productos únicos. Un día, un golpe fuerte sorprendió a todos: la puerta se cerró de repente con el viento. Desde ese momento, el negocio se convirtió en leyenda, un lugar donde la gente se reunía no solo para comprar, sino para compartir historias y sonrisas."
-  );
+  const [story, setStory] = useState("No story found");
+  const [storyTitle, setStoryTitle] = useState("Untitled");
   const [storyLoading, setStoryLoading] = useState(true);
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -28,7 +27,7 @@ export default function Story() {
   }, []);
   useEffect(() => {
     processStory();
-  }, [story])
+  }, [story]);
 
   const translateText = async (text, targetLang) => {
     const endpoint = "https://translation.googleapis.com/language/translate/v2";
@@ -52,6 +51,12 @@ export default function Story() {
         data,
         { headers }
       );
+      // if (response.data.data.translations.length > 2) {
+      //   return response.data.data.translations
+      //     .slice(0, 3)
+      //     .map((translation) => translation.translatedText).toString();
+      // }
+      console.log(response.data.data.translations.length);
       return response.data.data.translations[0].translatedText;
     } catch (error) {
       console.error("Error during translation:", error);
@@ -59,6 +64,12 @@ export default function Story() {
     }
   };
 
+  const capitalizeFirstLetter = (word) => {
+    if (word.length < 1) {
+      return "";
+    }
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  };
   const handleMouseDown = (e, word) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
     setShowTranslationBox(true);
@@ -67,7 +78,9 @@ export default function Story() {
     if (foundWord != undefined) {
       setWordTranslation(foundWord.english);
     } else {
-      translateText(word, "en").then(translation => setWordTranslation(translation));
+      translateText(word, "en").then((translation) =>
+        setWordTranslation(translation)
+      );
     }
   };
 
@@ -88,22 +101,48 @@ export default function Story() {
   };
   const generateChat = async () => {
     setStoryLoading(true);
+    let prompt = "";
+    switch (skillLevel) {
+      case "beginner":
+        prompt =
+          "In no more than 150 words, please create a short story in Mexican Spanish, ideal for beginner learners. The story should be engaging yet simple, using only elementary-level vocabulary and straightforward sentences. Crucially, the entire story must be in the present tense, with no past or future tense verbs. Incorporate each of these words seamlessly into the story: " +
+          words +
+          ". The words can be used in the title, but ensure every word is used at least once in the actual story, as each one is vital for the learner's vocabulary practice. Begin with a compelling story title (each word starting with a capital letter), followed by a | to separate it from the story. The narrative should be easy to understand for someone just starting to learn Spanish, integrating the given words naturally into the context.";
+        break;
+      case "intermediate":
+        prompt =
+          "In no more than 150 words, create an engaging short story in Mexican Spanish, aimed at intermediate learners. The narrative should primarily use elementary-level vocabulary, with occasional use of intermediate terms to enrich the language. Feel free to employ common verb conjugations such as the preterite, imperfect past, and gerund. Every word from this list must be included: " +
+          words +
+          ". Ensure each word is integrated thoughtfully, as they are crucial for developing the learner's vocabulary. Start with an intriguing story title (capitalize the initial letter of each word), followed by a | to separate it from the story. The story should be compelling yet accessible, offering intermediate learners a chance to practice and understand more varied Spanish structures.";
+        break;
+      case "advanced":
+        prompt =
+          "In no more than 200 words, craft a captivating short story in Mexican Spanish, suitable for advanced learners. The story should incorporate a wide range of conversational vocabulary, showcasing the richness of the language. You have the freedom to use any common verb tenses and conjugations. It is imperative to include each of these words: " +
+          words +
+          ". Weave these words seamlessly into your story, as each one forms a key part of the narrative and aids in vocabulary enhancement. Begin with an engaging title, with each word starting with a capital letter, and separate it from the story with a |. This story should challenge advanced learners with its diverse vocabulary and complex grammatical structures, while remaining coherent and intriguing.";
+        break;
+      default:
+        prompt = "Please say hi";
+        break;
+    }
     try {
       const chatCompletion = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: [
           {
             role: "system",
-            content:
-            "In no more than 150 words, please create a short story in Spanish, suitable for beginner learners. The story must use only elementary-level vocabulary and simple sentences. It is crucial that the entire story is written in the present tense, without any past or future tense verbs. You must include all of these words: " + words + ". The story should be engaging but simple, designed for someone just starting to learn Spanish. Remember, only use present tense verbs to keep the story easy to understand."
-
+            content: prompt,
           },
         ],
         temperature: 0.8,
-        max_tokens: 300,
+        max_tokens: 350,
       });
       console.log("Response:", chatCompletion); // Log the entire response
-      setStory(chatCompletion.choices[0].message.content); // Accessing the content correctly
+      const storyAndTitle =
+        chatCompletion.choices[0].message.content.split("|");
+      console.log(storyAndTitle);
+      setStory(storyAndTitle[1].trim()); // Accessing the content correctly
+      setStoryTitle(storyAndTitle[0].trim());
     } catch (error) {
       console.error("Error fetching chat completion:", error);
       setStory("Failed to fetch story");
@@ -136,6 +175,7 @@ export default function Story() {
         </span>
       );
     });
+    
 
     // Combine words into a single JSX element, preserving spaces
     return processedStory.reduce((acc, curr) => (
@@ -146,19 +186,24 @@ export default function Story() {
   };
 
   return (
-    <div className={storyStyles.pageContainer}>
+    <div>
       <div style={boxStyle}>
         <p>{wordTranslation}</p>
       </div>
       {/* <div className={storyStyles.storyContainer}>{processStory()}</div> */}
       {storyLoading ? (
-        <div className={storyStyles.spinnerContainer}>
-          <h2>Spanish story generating...</h2>
-          <div className={storyStyles.spinner}></div>
+        <div className={storyStyles.pageContainer}>
+          <div className={storyStyles.spinnerContainer}>
+            <h2>
+              {capitalizeFirstLetter(skillLevel)} Spanish Story Generating...
+            </h2>
+            <div className={storyStyles.spinner}></div>
+          </div>
         </div>
       ) : (
-        <div className={storyStyles.storyContainer}>
-          {processStory()}
+        <div className={storyStyles.pageContainer}>
+          <h1>{storyTitle}</h1>
+          <div className={storyStyles.storyContainer}>{processStory()}</div>
         </div>
       )}
     </div>

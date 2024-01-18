@@ -1,5 +1,16 @@
-.skillLevelSection {
+.skillLevelPage {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.title {
+    font-size: 4em;
+    font-weight: 800;
+}
+.skillLevelSection {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,13 +21,15 @@
     min-width: 7rem;
     height: 25rem;
     border: 1px solid black;
-    background-color: white;
+    background-color: rgb(243, 245, 253);
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
 }
 .skillLevelBox:hover {
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(227, 235, 252);
     cursor: pointer;
-    width: 21%;
-    height: 26rem;
+    transform: scale(1.05);
 }
 .skillLevelTitle {
     width: 100%;
@@ -25,4 +38,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.skillLevelBody {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skillLevelIcon {
+    width: 65%;
 }

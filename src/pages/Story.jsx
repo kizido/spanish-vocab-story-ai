@@ -98,6 +98,8 @@ export default function Story() {
     display: showTranslationBox ? "block" : "none",
     transform: "translate(-50%, -125%)",
     pointerEvents: "none", // To prevent the box from interfering with the mouse events
+    textAlign: "center",
+    lineHeight: "5rem",
   };
   const generateChat = async () => {
     setStoryLoading(true);
@@ -113,13 +115,13 @@ export default function Story() {
         prompt =
           "In no more than 150 words, create an engaging short story in Mexican Spanish, aimed at intermediate learners. The narrative should primarily use elementary-level vocabulary, with occasional use of intermediate terms to enrich the language. Feel free to employ common verb conjugations such as the preterite, imperfect past, and gerund. Every word from this list must be included: " +
           words +
-          ". Ensure each word is integrated thoughtfully, as they are crucial for developing the learner's vocabulary. Start with an intriguing story title (capitalize the initial letter of each word), followed by a | to separate it from the story. The story should be compelling yet accessible, offering intermediate learners a chance to practice and understand more varied Spanish structures.";
+          ". Ensure each word is integrated thoughtfully, as they are crucial for developing the learner's vocabulary. The words can be used in the title, but ensure every word is used at least once in the actual story. Start with an intriguing story title (capitalize the initial letter of each word), followed by a | to separate it from the story. The story should be compelling yet accessible, offering intermediate learners a chance to practice and understand more varied Spanish structures.";
         break;
       case "advanced":
         prompt =
           "In no more than 200 words, craft a captivating short story in Mexican Spanish, suitable for advanced learners. The story should incorporate a wide range of conversational vocabulary, showcasing the richness of the language. You have the freedom to use any common verb tenses and conjugations. It is imperative to include each of these words: " +
           words +
-          ". Weave these words seamlessly into your story, as each one forms a key part of the narrative and aids in vocabulary enhancement. Begin with an engaging title, with each word starting with a capital letter, and separate it from the story with a |. This story should challenge advanced learners with its diverse vocabulary and complex grammatical structures, while remaining coherent and intriguing.";
+          ". Weave these words seamlessly into your story, as each one forms a key part of the narrative and aids in vocabulary enhancement. The words can be used in the title, but ensure every word is used at least once in the actual story. Begin with an engaging title, with each word starting with a capital letter, and separate it from the story with a |. This story should challenge advanced learners with its diverse vocabulary and complex grammatical structures, while remaining coherent and intriguing.";
         break;
       default:
         prompt = "Please say hi";
@@ -154,24 +156,29 @@ export default function Story() {
   const processStory = () => {
     // Split story into words and process each word
     const processedStory = story.split(/\s+/).map((word, index) => {
-      // Remove punctuation for comparison, but keep original word for display
-      const wordToCheck = word.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, "");
-      const key = `${word}-${index}`;
-      const isHighlighted = wordsArray.includes(wordToCheck.toLowerCase());
+      // Separate the word from its surrounding punctuation
+      const match = word.match(
+        /([^\wáéíóúÁÉÍÓÚñÑ]*)([\wáéíóúÁÉÍÓÚñÑ]+)([^\wáéíóúÁÉÍÓÚñÑ]*)/
+      );
+      const prefix = match[1]; // Punctuation before the word
+      const coreWord = match[2]; // The actual word
+      const suffix = match[3]; // Punctuation after the word
+      const wordToCheck = coreWord.toLowerCase();
+      const key = `${coreWord}-${index}`;
+      const isHighlighted = wordsArray.includes(wordToCheck);
 
-      // Check if word should be highlighted
+      // Render the word with its punctuation, highlighting only the word
       return (
-        <span
-          key={key}
-          className={
-            isHighlighted
-              ? `${storyStyles.storyText} ${storyStyles.wordLearning}`
-              : `${storyStyles.storyText}`
-          }
-          onMouseDown={(e) => handleMouseDown(e, word)}
-          onMouseLeave={handleMouseLeave}
-        >
-          {word}
+        <span key={key} className={storyStyles.storyText}>
+          {prefix}
+          <span
+            className={isHighlighted ? storyStyles.wordLearning : ""}
+            onMouseDown={(e) => handleMouseDown(e, coreWord)}
+            onMouseLeave={handleMouseLeave}
+          >
+            {coreWord}
+          </span>
+          {suffix}{" "}
         </span>
       );
     });
@@ -179,7 +186,8 @@ export default function Story() {
     // Combine words into a single JSX element, preserving spaces
     return processedStory.reduce((acc, curr) => (
       <>
-        {acc} {curr}{" "}
+        {acc}
+        {curr}
       </>
     ));
   };
@@ -187,22 +195,33 @@ export default function Story() {
   const processStoryTitle = () => {
     // Split story into words and process each word
     const processedStoryTitle = storyTitle.split(/\s+/).map((word, index) => {
-      // Remove punctuation for comparison, but keep original word for display
-      const wordToCheck = word.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, "");
-      const key = `${word}-${index}`;
-      const isHighlighted = wordsArray.includes(wordToCheck.toLowerCase());
+      // Separate the word from its surrounding punctuation
+      const match = word.match(
+        /([^\wáéíóúÁÉÍÓÚñÑ]*)([\wáéíóúÁÉÍÓÚñÑ]+)([^\wáéíóúÁÉÍÓÚñÑ]*)/
+      );
+      const prefix = match[1]; // Punctuation before the word
+      const coreWord = match[2]; // The actual word
+      const suffix = match[3]; // Punctuation after the word
+      const wordToCheck = coreWord.toLowerCase();
+      const key = `${coreWord}-${index}`;
+      const isHighlighted = wordsArray.includes(wordToCheck);
 
-      // Check if word should be highlighted
+      // Render the word with its punctuation, highlighting only the word
       return (
-        <span
-          key={key}
-          className={isHighlighted
-            ? `${storyStyles.title} ${storyStyles.wordLearning}`
-            : `${storyStyles.title}`}
-          onMouseDown={(e) => handleMouseDown(e, word)}
-          onMouseLeave={handleMouseLeave}
-        >
-          {word}
+        <span key={key} className={storyStyles.storyText}>
+          {prefix}
+          <span
+            className={
+              isHighlighted
+                ? `${storyStyles.wordLearning} ${storyStyles.title}`
+                : `${storyStyles.title}`
+            }
+            onMouseDown={(e) => handleMouseDown(e, coreWord)}
+            onMouseLeave={handleMouseLeave}
+          >
+            {coreWord}
+          </span>
+          {suffix}{" "}
         </span>
       );
     });
@@ -210,7 +229,8 @@ export default function Story() {
     // Combine words into a single JSX element, preserving spaces
     return processedStoryTitle.reduce((acc, curr) => (
       <>
-        {acc} {curr}{" "}
+        {acc}
+        {curr}
       </>
     ));
   };

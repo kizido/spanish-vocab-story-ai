@@ -19,14 +19,36 @@ export default function Flashcards() {
   const [vocabLeft, setVocabLeft] = useState(vocabAmount);
   const [wordIndex, setWordIndex] = useState(getRandomWordIndex());
   const [wordsToLearn, setWordsToLearn] = useState([]);
+  const [wordsToNotLearn, setWordsToNotLearn] = useState([]);
   const [cardFlipped, setCardFlipped] = useState(false);
 
   useEffect(() => {
     console.log(wordsToLearn);
+    findNewWordIndex();
     if (vocabLeft < 1) {
       navigate(`/${skillLevel}/story/${encodeURIComponent(wordsToLearn)}`);
     }
   }, [wordsToLearn]);
+
+  const findNewWordIndex = () => {
+    // setWordIndex(getRandomWordIndex);
+    let searching = true;
+    while (searching) {
+      const index = getRandomWordIndex();
+      if (
+        !wordsToLearn.includes(wordList[index].spanish) &&
+        !wordsToNotLearn.includes(wordList[index].spanish)
+      ) {
+        setWordIndex(index);
+        searching = false;
+      }
+      if (wordsToLearn.length + wordsToNotLearn.length >= wordList.length) {
+        searching = false;
+      }
+      console.log("Count: " + wordsToLearn.length + wordsToNotLearn.length);
+      console.log("Length: " + wordList.length);
+    }
+  };
 
   return (
     <div className={flashcardStyles.pageContainer}>
@@ -52,7 +74,11 @@ export default function Flashcards() {
         <button
           className={flashcardStyles.wordPassButton}
           onClick={() => {
-            setWordIndex(getRandomWordIndex);
+            setWordsToNotLearn([
+              ...wordsToNotLearn,
+              wordList[wordIndex].spanish,
+            ]);
+            findNewWordIndex();
             setCardFlipped(false);
           }}
         >
@@ -63,7 +89,6 @@ export default function Flashcards() {
           onClick={() => {
             setWordsToLearn([...wordsToLearn, wordList[wordIndex].spanish]);
             setVocabLeft(vocabLeft - 1);
-            setWordIndex(getRandomWordIndex());
             setCardFlipped(false);
           }}
         >

@@ -5,6 +5,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+}
+.title:hover {
+  color: gray;
+  cursor: pointer;
 }
 .storyContainer {
   border: 3px dashed black;
@@ -15,16 +20,15 @@
 .storyText {
   font-size: 1.5em;
   font-weight: 500;
-  cursor: pointer;
 }
 .storyText:hover {
     color: gray;
+    cursor: pointer;
 }
 .wordLearning {
     color: blue;
     font-weight: bold;
 }
-
 .spinnerContainer {
     display: flex;
     flex-direction: column;

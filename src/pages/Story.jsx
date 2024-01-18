@@ -175,10 +175,40 @@ export default function Story() {
         </span>
       );
     });
-    
 
     // Combine words into a single JSX element, preserving spaces
     return processedStory.reduce((acc, curr) => (
+      <>
+        {acc} {curr}{" "}
+      </>
+    ));
+  };
+
+  const processStoryTitle = () => {
+    // Split story into words and process each word
+    const processedStoryTitle = storyTitle.split(/\s+/).map((word, index) => {
+      // Remove punctuation for comparison, but keep original word for display
+      const wordToCheck = word.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, "");
+      const key = `${word}-${index}`;
+      const isHighlighted = wordsArray.includes(wordToCheck.toLowerCase());
+
+      // Check if word should be highlighted
+      return (
+        <span
+          key={key}
+          className={isHighlighted
+            ? `${storyStyles.title} ${storyStyles.wordLearning}`
+            : `${storyStyles.title}`}
+          onMouseDown={(e) => handleMouseDown(e, word)}
+          onMouseLeave={handleMouseLeave}
+        >
+          {word}
+        </span>
+      );
+    });
+
+    // Combine words into a single JSX element, preserving spaces
+    return processedStoryTitle.reduce((acc, curr) => (
       <>
         {acc} {curr}{" "}
       </>
@@ -202,8 +232,9 @@ export default function Story() {
         </div>
       ) : (
         <div className={storyStyles.pageContainer}>
-          <h1>{storyTitle}</h1>
+          <h1>{processStoryTitle()}</h1>
           <div className={storyStyles.storyContainer}>{processStory()}</div>
+          <button>Regenerate</button>
         </div>
       )}
     </div>

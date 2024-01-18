@@ -13,7 +13,7 @@ const getRandomWordIndex = () => {
 export default function Flashcards() {
   let navigate = useNavigate();
 
-  let { vocabAmount } = useParams();
+  let { vocabAmount, skillLevel } = useParams();
   vocabAmount = parseInt(vocabAmount);
 
   const [vocabLeft, setVocabLeft] = useState(vocabAmount);
@@ -24,7 +24,7 @@ export default function Flashcards() {
   useEffect(() => {
     console.log(wordsToLearn);
     if (vocabLeft < 1) {
-      navigate(`/story/${encodeURIComponent(wordsToLearn)}`);
+      navigate(`/${skillLevel}/story/${encodeURIComponent(wordsToLearn)}`);
     }
   }, [wordsToLearn]);
 

@@ -95,7 +95,7 @@ export default function Story() {
           {
             role: "system",
             content:
-            "In no more than 150 words, please create a short story in Spanish, suitable for beginner learners. The story must use only elementary-level vocabulary and simple sentences. It is crucial that the entire story is written in the present tense, without any past or future tense verbs. Please include these words: " + words + ". The story should be engaging but simple, designed for someone just starting to learn Spanish. Remember, only use present tense verbs to keep the story easy to understand."
+            "In no more than 150 words, please create a short story in Spanish, suitable for beginner learners. The story must use only elementary-level vocabulary and simple sentences. It is crucial that the entire story is written in the present tense, without any past or future tense verbs. You must include all of these words: " + words + ". The story should be engaging but simple, designed for someone just starting to learn Spanish. Remember, only use present tense verbs to keep the story easy to understand."
 
           },
         ],

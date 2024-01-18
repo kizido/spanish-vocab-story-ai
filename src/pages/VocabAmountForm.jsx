@@ -5,12 +5,13 @@ import {
   UisAngleRight,
   UisCheckCircle,
 } from "@iconscout/react-unicons-solid";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function VocabAmountForm() {
   const [vocabAmount, setVocabAmount] = useState(5);
 
   let navigate = useNavigate();
+  const { skillLevel } = useParams();
 
   const decrementVocabAmount = () => {
     if (vocabAmount > 1) {
@@ -23,7 +24,7 @@ export default function VocabAmountForm() {
     }
   };
   const goToFlashCards = () => {
-    navigate(`/flashcards/${vocabAmount}`);
+    navigate(`/${skillLevel}/flashcards/${vocabAmount}`);
   };
   return (
     <div className={styles.vocabAmountSection}>

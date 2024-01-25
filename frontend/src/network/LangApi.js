@@ -1,5 +1,5 @@
-const translateText = async (text, targetLang) => {
-  const response = await fetch("/api/translate", {
+export const translateText = async (text, targetLang) => {
+  const response = await fetch("/api/translateText", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -10,7 +10,7 @@ const translateText = async (text, targetLang) => {
   return data.translatedText;
 };
 
-const generateChat = async (skillLevel, words) => {
+export const generateChat = async (skillLevel, words) => {
   try {
     // Send a POST request to serverless endpoint
     const response = await fetch("/api/generateChat", {
@@ -23,9 +23,8 @@ const generateChat = async (skillLevel, words) => {
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
-    const chatCompletion = await response.json(); // Get the response from your serverless function
-
-    return chatCompletion.choices[0].message.content;
+    const { message } = await response.json(); // Get the response from your serverless function
+    return message;
   } catch (error) {
     console.error("Error fetching chat completion:", error);
   }

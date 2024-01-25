@@ -1,15 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import OpenAI from "openai";
 import * as storyStyles from "../style/Story.module.css";
 import frequencyList from "../vocab_lists/spanishfrequency.json";
 import * as LangApi from "../network/LangApi";
-
-const openai = new OpenAI({
-  apiKey: import.meta.env.VITE_OPENAIKEY,
-  dangerouslyAllowBrowser: true,
-});
 
 export default function Story() {
   const { skillLevel, wordsToLearn } = useParams();

@@ -53,7 +53,7 @@ export default function Story() {
     //   return null;
     // }
     try {
-      const translatedText = LangApi.translateText(text, targetLang);
+      const translatedText = await LangApi.translateText(text, targetLang);
       return translateText;
     } catch (error) {
       console.error("TRANSLATED TEXT NOT FOUND: " + error);
@@ -101,15 +101,15 @@ export default function Story() {
   const generateChat = async () => {
     setStoryLoading(true);
     try {
-      const generatedStory = LangApi.generateChat(skillLevel, words);
-      const storyAndTitle = generatedStory.split("|");
-      setStoryTitle(storyAndTitle[0].trim());
-      setStory(storyAndTitle[1].trim());
+      const generatedStory = await LangApi.generateChat(skillLevel, words);
+      console.log(generatedStory);
+      // const storyAndTitle = generatedStory.split("|");
+      // setStoryTitle(storyAndTitle[0].trim());
+      // setStory(storyAndTitle[1].trim());
     } catch (error) {
       console.error("Story could not be generated: " + error);
       setStory("Story loading failed");
-    }
-    finally {
+    } finally {
       setStoryLoading(false);
     }
     // let prompt = "";

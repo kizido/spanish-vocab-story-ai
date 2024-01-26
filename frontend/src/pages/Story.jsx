@@ -26,8 +26,9 @@ export default function Story() {
 
   const translateText = async (text, targetLang) => {
     try {
+      console.log("WORDS: " + text + "\nSKILL LEVEL: " + targetLang)
       const translatedText = await LangApi.translateText(text, targetLang);
-      return translateText;
+      return translatedText;
     } catch (error) {
       console.error("TRANSLATED TEXT NOT FOUND: " + error);
       return null;

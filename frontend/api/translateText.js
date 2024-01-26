@@ -1,7 +1,9 @@
-const axios = require('axios');
-require('dotenv').config();
+import axios from 'axios';
+import dotenv from 'dotenv';
 
-module.exports = async (req, res) => {
+dotenv.config();
+
+export default async function translateText(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).send('Method Not Allowed');
   }

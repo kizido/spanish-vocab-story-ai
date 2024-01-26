@@ -1,7 +1,9 @@
-const OpenAI = require("openai");
-require("dotenv").config();
+import OpenAI from "openai";
+import dotenv from 'dotenv';
 
-module.exports = async (req, res) => {
+dotenv.config();
+
+export default async function generateChat(req, res) {
   const openai = new OpenAI({
     apiKey: process.env.OPENAIKEY,
   });

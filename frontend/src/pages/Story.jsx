@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import * as storyStyles from "../style/Story.module.css";
 import frequencyList from "../vocab_lists/spanishfrequency.json";
 import * as LangApi from "../network/LangApi";
@@ -16,6 +16,8 @@ export default function Story() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showTranslationBox, setShowTranslationBox] = useState(false);
   const [wordTranslation, setWordTranslation] = useState("");
+
+  let navigate = useNavigate();
 
   useEffect(() => {
     generateChat();
@@ -190,7 +192,8 @@ export default function Story() {
         <div className={storyStyles.pageContainer}>
           {/* <h1>{processStoryTitle()}</h1> */}
           <div className={storyStyles.storyContainer}>{processStory()}</div>
-          <button>Regenerate</button>
+          <button onClick={generateChat}>Regenerate</button>
+          <button onClick={() => navigate(`/${skillLevel}/vocabAmount`)}>Learn New Words</button>
         </div>
       )}
     </div>

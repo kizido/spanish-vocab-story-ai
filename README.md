@@ -1,7 +1,8 @@
-# 📘 Vocab Story AI: Learn Spanish Through AI-Generated Stories
+# 📘 Vocab Story AI: Learn Spanish Through Tailored AI Stories
 
 ## 🌟 Introduction
 Bienvenidos a **VocabStoryAI**, an innovative tool for learning Spanish through engaging, AI-generated stories. Powered by the ChatGPT API, this project offers a unique blend of technology and language learning.
+[Live Demo](https://www.vocabstoryai.xyz/)
 
 ## ✨ Features
 - **🤖 AI-Powered Story Generation:** Leveraging the ChatGPT API for creating immersive Spanish stories.
@@ -11,22 +12,22 @@ Bienvenidos a **VocabStoryAI**, an innovative tool for learning Spanish through 
 Follow these steps to get started with VocabStoryAI:
 
 1. **Clone the Repository**
-   \```bash
+   ```
    git clone https://github.com/kizido/spanish-vocab-story-ai.git
-   \```
+   ```
 2. **Install Dependencies**
-   \```bash
+   ```
    npm install
-   \```
+   ```
 3. **Configure the ChatGPT API**
    - Obtain an API key from OpenAI.
    - Set up the API key in your project.
 
 4. **Launch the Application**
    I am using vercel dev to run on local, so it might be a bit difficult to launch.
-   \```bash
+   ```
    vercel dev
-   \```
+   ```
 
 ## 📘 How to Use
 - Initiate the application.

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import * as styles from "../style/Introduction.module.css";
+import * as styles from "../style/VocabAmount.module.css";
 import {
   UisAngleLeft,
   UisAngleRight,

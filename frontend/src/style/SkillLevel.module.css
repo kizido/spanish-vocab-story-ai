@@ -9,6 +9,7 @@
 .title {
     font-size: 4em;
     font-weight: 800;
+    text-align: center;
 }
 .skillLevelSection {
     display: flex;
@@ -34,13 +35,12 @@
 .skillLevelTitle {
     width: 100%;
     height: 4rem;
-    border-bottom: 1px dashed black;
+    /* border-bottom: 1px dashed black; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .skillLevelBody {
-    flex-grow: 1;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -48,4 +48,21 @@
 }
 .skillLevelIcon {
     width: 65%;
+}
+@media (max-width: 725px) {
+    .skillLevelSection {
+        flex-direction: column;
+        width: 80%;
+    }
+    .skillLevelBox {
+        height: 8rem;
+        width: 75%;
+    }
+    .skillLevelIcon {
+        width: 40%;
+        max-width: 4rem;
+    }
+    .title {
+        font-size: 3em;
+    }
 }

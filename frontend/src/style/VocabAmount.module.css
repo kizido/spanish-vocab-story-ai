@@ -9,6 +9,7 @@
 .vocabAmountQuestion {
     text-align: center;
     max-width: 35rem;
+    width: 80%;
     /* margin-top: 20rem;
     margin-left: auto;
     margin-right: auto; */
@@ -50,4 +51,22 @@
 .vocabAmountCheckmark:hover {
     color: #13db27;
     cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .vocabAmountInputSection {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .vocabAmountQuestion {
+        font-size: 2.5em;
+    }
+    .vocabAmountInputBox {
+        width: 15rem;
+        height: 4rem;
+    }
+    .vocabAmountCheckmark {
+        width: 80px;
+        height: 80px;
+    }
 }

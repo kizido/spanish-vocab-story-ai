@@ -53,14 +53,15 @@
     .skillLevelSection {
         flex-direction: column;
         width: 80%;
+        gap: 1rem;
     }
     .skillLevelBox {
-        height: 8rem;
+        height: 6rem;
         width: 75%;
     }
     .skillLevelIcon {
         width: 40%;
-        max-width: 4rem;
+        max-width: 2rem;
     }
     .title {
         font-size: 3em;

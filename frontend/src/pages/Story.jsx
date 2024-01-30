@@ -192,8 +192,10 @@ export default function Story() {
         <div className={storyStyles.pageContainer}>
           {/* <h1>{processStoryTitle()}</h1> */}
           <div className={storyStyles.storyContainer}>{processStory()}</div>
-          <button onClick={generateChat}>Regenerate</button>
-          <button onClick={() => navigate(`/${skillLevel}/vocabAmount`)}>Learn New Words</button>
+          <div className={storyStyles.buttonContainer}>
+            <button onClick={generateChat}>Regenerate</button>
+            <button onClick={() => navigate(`/${skillLevel}/vocabAmount`)}>Learn New Words</button>
+          </div>
         </div>
       )}
     </div>

@@ -10,7 +10,7 @@ export default function Story() {
   const words = decodeURIComponent(wordsToLearn);
   const wordsArray = words.split(/[,/]+/);
   const [story, setStory] = useState("No story found");
-  const [storyTitle, setStoryTitle] = useState("Untitled");
+  // const [storyTitle, setStoryTitle] = useState("Untitled");
   const [storyLoading, setStoryLoading] = useState(true);
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -76,10 +76,11 @@ export default function Story() {
     setStoryLoading(true);
     try {
       const generatedStory = await LangApi.generateChat(skillLevel, words);
-      console.log(generatedStory);
-      const storyAndTitle = generatedStory.split("|");
-      setStoryTitle(storyAndTitle[0].trim());
-      setStory(storyAndTitle[1].trim());
+      setStory(generatedStory);
+      // console.log(generatedStory);
+      // const storyAndTitle = generatedStory.split("|");
+      // setStoryTitle(storyAndTitle[0].trim());
+      // setStory(storyAndTitle[1].trim());
     } catch (error) {
       console.error("Story could not be generated: " + error);
       setStory("Story loading failed");
@@ -127,48 +128,48 @@ export default function Story() {
     ));
   };
 
-  const processStoryTitle = () => {
-    // Split story into words and process each word
-    const processedStoryTitle = storyTitle.split(/\s+/).map((word, index) => {
-      // Separate the word from its surrounding punctuation
-      const match = word.match(
-        /([^\wáéíóúÁÉÍÓÚñÑ]*)([\wáéíóúÁÉÍÓÚñÑ]+)([^\wáéíóúÁÉÍÓÚñÑ]*)/
-      );
-      const prefix = match[1]; // Punctuation before the word
-      const coreWord = match[2]; // The actual word
-      const suffix = match[3]; // Punctuation after the word
-      const wordToCheck = coreWord.toLowerCase();
-      const key = `${coreWord}-${index}`;
-      const isHighlighted = wordsArray.includes(wordToCheck);
+  // const processStoryTitle = () => {
+  //   // Split story into words and process each word
+  //   const processedStoryTitle = storyTitle.split(/\s+/).map((word, index) => {
+  //     // Separate the word from its surrounding punctuation
+  //     const match = word.match(
+  //       /([^\wáéíóúÁÉÍÓÚñÑ]*)([\wáéíóúÁÉÍÓÚñÑ]+)([^\wáéíóúÁÉÍÓÚñÑ]*)/
+  //     );
+  //     const prefix = match[1]; // Punctuation before the word
+  //     const coreWord = match[2]; // The actual word
+  //     const suffix = match[3]; // Punctuation after the word
+  //     const wordToCheck = coreWord.toLowerCase();
+  //     const key = `${coreWord}-${index}`;
+  //     const isHighlighted = wordsArray.includes(wordToCheck);
 
-      // Render the word with its punctuation, highlighting only the word
-      return (
-        <span key={key} className={storyStyles.storyText}>
-          {prefix}
-          <span
-            className={
-              isHighlighted
-                ? `${storyStyles.wordLearning} ${storyStyles.title}`
-                : `${storyStyles.title}`
-            }
-            onMouseDown={(e) => handleMouseDown(e, coreWord)}
-            onMouseLeave={handleMouseLeave}
-          >
-            {coreWord}
-          </span>
-          {suffix}{" "}
-        </span>
-      );
-    });
+  //     // Render the word with its punctuation, highlighting only the word
+  //     return (
+  //       <span key={key} className={storyStyles.storyText}>
+  //         {prefix}
+  //         <span
+  //           className={
+  //             isHighlighted
+  //               ? `${storyStyles.wordLearning} ${storyStyles.title}`
+  //               : `${storyStyles.title}`
+  //           }
+  //           onMouseDown={(e) => handleMouseDown(e, coreWord)}
+  //           onMouseLeave={handleMouseLeave}
+  //         >
+  //           {coreWord}
+  //         </span>
+  //         {suffix}{" "}
+  //       </span>
+  //     );
+  //   });
 
-    // Combine words into a single JSX element, preserving spaces
-    return processedStoryTitle.reduce((acc, curr) => (
-      <>
-        {acc}
-        {curr}
-      </>
-    ));
-  };
+  //   // Combine words into a single JSX element, preserving spaces
+  //   return processedStoryTitle.reduce((acc, curr) => (
+  //     <>
+  //       {acc}
+  //       {curr}
+  //     </>
+  //   ));
+  // };
 
   return (
     <div>
@@ -187,7 +188,7 @@ export default function Story() {
         </div>
       ) : (
         <div className={storyStyles.pageContainer}>
-          <h1>{processStoryTitle()}</h1>
+          {/* <h1>{processStoryTitle()}</h1> */}
           <div className={storyStyles.storyContainer}>{processStory()}</div>
           <button>Regenerate</button>
         </div>

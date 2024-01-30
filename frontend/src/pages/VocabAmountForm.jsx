@@ -8,7 +8,7 @@ import {
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function VocabAmountForm() {
-  const [vocabAmount, setVocabAmount] = useState(5);
+  const [vocabAmount, setVocabAmount] = useState(3);
 
   let navigate = useNavigate();
   const { skillLevel } = useParams();
@@ -19,7 +19,7 @@ export default function VocabAmountForm() {
     }
   };
   const incrementVocabAmount = () => {
-    if(vocabAmount < 10) {
+    if(vocabAmount < 3) {
       setVocabAmount(vocabAmount + 1);
     }
   };
@@ -29,7 +29,7 @@ export default function VocabAmountForm() {
   return (
     <div className={styles.vocabAmountSection}>
       <h1 className={styles.vocabAmountQuestion}>
-        How many Spanish words would you like to learn today?
+        How many Spanish words would you like to learn today? (1-3)
       </h1>
       <div className={styles.vocabAmountInputSection}>
         <div className={styles.vocabAmountInputBox}>

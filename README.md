@@ -23,7 +23,11 @@ Follow these steps to get started with VocabStoryAI:
    - Obtain an API key from OpenAI.
    - Set up the API key in your project.
 
-4. **Launch the Application**
+4. **Configure the Google Cloud Translation API**
+   - Obtain an API key for the Google Cloud Translation API.
+   - Set up the API key in your project.
+
+5. **Launch the Application**
    I am using vercel dev to run on local, so it might be a bit difficult to launch.
    ```
    vercel dev

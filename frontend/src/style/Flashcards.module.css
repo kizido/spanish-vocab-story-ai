@@ -1,22 +1,24 @@
 .pageContainer {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
     align-items: center;
-    height: 100vh;
+    width: 100%;
 }
-
+.title {
+    margin: 0;
+}
 .flashcardContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    width: 35%;
-    min-width: 25rem;
+    width: 35rem;
     height: 40%;
-    min-height: 20rem;
+    min-height: 10rem;
     border: 1px solid black;
     background-color: white;
     cursor: pointer;
@@ -37,9 +39,6 @@
     justify-content: center;
     align-items: flex-end;
     gap: 0.5rem;
-}
-.flashcardContainer h4 {
-    margin: 1rem;
 }
 .flashcardContainer h4, .wordClass {
     font-size: 1.2em;
@@ -68,4 +67,35 @@
 }
 .wordPassButton:hover, .wordConfirmButton:hover {
     background-color: rgb(215, 219, 237);
+}
+@media (max-width: 700px) {
+    .flashcardContainer {
+        width: 80%;
+    }
+}
+@media (max-width: 500px) {
+    .title {
+        font-size: 2.5em;
+    }
+    .pageContainer {
+        gap: 2rem;
+    }
+    .flashcardContainer {
+        height: 30%;
+        width: 80%;
+    }
+    .wordConfirmationContainer {
+        justify-content: center;
+        gap: 1rem;
+    }
+    .wordConfirmationContainer button {
+        width: 8rem;
+        font-size: 1em;
+    }
+    .wordClass {
+        font-size: 1em;
+    }
+    .word {
+        font-size: 1.5em;
+    }
 }

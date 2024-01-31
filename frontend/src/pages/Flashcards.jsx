@@ -52,7 +52,7 @@ export default function Flashcards() {
 
   return (
     <div className={flashcardStyles.pageContainer}>
-      <h1>Vocab Left: {vocabLeft}</h1>
+      <h1 className={flashcardStyles.title}>Vocab Left: {vocabLeft}</h1>
       <div
         className={flashcardStyles.flashcardContainer}
         onClick={() => setCardFlipped(!cardFlipped)}
@@ -62,7 +62,7 @@ export default function Flashcards() {
           <h3 className={flashcardStyles.wordClass}>
             ({wordList[wordIndex].wordClass})
           </h3>
-          <h2>
+          <h2 className={flashcardStyles.word}>
             {cardFlipped
               ? wordList[wordIndex].english
               : wordList[wordIndex].spanish}

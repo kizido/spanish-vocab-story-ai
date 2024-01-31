@@ -40,6 +40,9 @@
     justify-content: center;
     align-items: center;
 }
+.skillLevelTitle h2 {
+    line-height: 0.2;
+}
 .skillLevelBody {
     height: 100%;
     display: flex;

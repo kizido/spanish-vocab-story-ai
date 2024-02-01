@@ -7,6 +7,8 @@ Bienvenidos a **VocabStoryAI**, an innovative tool for learning Spanish through 
 ## ✨ Features
 - **🤖 AI-Powered Story Generation:** Leveraging the ChatGPT API for creating immersive Spanish stories.
 - **📚 Vocabulary Insights:** Each story highlights key vocabulary for immersive learning.
+- **💬 Instant Translatoins:** Simply hover and click over any word in the story for an instant translation.
+- **🧠 Difficulty Levels:** Choose your Spanish proficency for a story more tailored to your skill level.
 
 ## 🚀 Getting Started
 Follow these steps to get started with VocabStoryAI:

@@ -68,11 +68,12 @@ export default function Story() {
     width: "8rem",
     height: "5rem",
     backgroundColor: "white",
-    display: showTranslationBox ? "block" : "none",
+    display: showTranslationBox ? "flex" : "none",
     transform: "translate(-50%, -125%)",
     pointerEvents: "none", // To prevent the box from interfering with the mouse events
     textAlign: "center",
-    lineHeight: "5rem",
+    alignItems: "center",
+    justifyContent: "center",
   };
   const generateChat = async () => {
     setStoryLoading(true);
@@ -175,7 +176,7 @@ export default function Story() {
 
   return (
     <div>
-      <div style={boxStyle}>
+      <div style={boxStyle} className={storyStyles.translationBox}>
         <p>{wordTranslation}</p>
       </div>
       {/* <div className={storyStyles.storyContainer}>{processStory()}</div> */}

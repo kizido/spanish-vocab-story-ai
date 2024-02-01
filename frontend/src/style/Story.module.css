@@ -52,6 +52,18 @@
   gap: 2rem;
 }
 
+.buttonContainer button {
+  width: 10rem;
+  height: 3rem;
+}
+
+.translationBox {
+  border: 2px solid black;
+}
+.translationBox p {
+  font-weight: 500;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

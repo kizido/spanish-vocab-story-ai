@@ -19,7 +19,7 @@ export default function VocabAmountForm() {
     }
   };
   const incrementVocabAmount = () => {
-    if(vocabAmount < 3) {
+    if(vocabAmount < 5) {
       setVocabAmount(vocabAmount + 1);
     }
   };

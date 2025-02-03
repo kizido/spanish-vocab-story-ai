@@ -55,6 +55,7 @@
 .buttonContainer button {
   width: 10rem;
   height: 3rem;
+  color: black;
 }
 
 .translationBox {

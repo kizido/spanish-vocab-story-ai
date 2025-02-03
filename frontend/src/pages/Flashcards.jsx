@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import wordList from "../vocab_lists/spanishnouns.json";
+import wordList from "../vocab_lists/learningListBeginner.json";
 import * as flashcardStyles from "../style/Flashcards.module.css";
 
 const getRandomInt = (max) => {

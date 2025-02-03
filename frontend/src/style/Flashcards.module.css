@@ -57,6 +57,7 @@
     border: 1px solid black;
     width: 12rem;
     background-color: rgb(240, 243, 255);
+    padding: 1rem 0;
 }
 .wordPassButton {
     color: rgb(163, 39, 39);

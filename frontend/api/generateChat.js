@@ -19,7 +19,7 @@ export default async function generateChat(req, res) {
   try {
     console.log(prompt);
     const chatCompletion = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       messages: [
         { role: "system", content: "You are a Mexican Spanish short story generator." },
         {

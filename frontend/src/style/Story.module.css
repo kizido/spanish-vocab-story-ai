@@ -56,6 +56,7 @@
   width: 10rem;
   height: 3rem;
   color: black;
+  border: 1px solid black ;
 }
 
 .translationBox {

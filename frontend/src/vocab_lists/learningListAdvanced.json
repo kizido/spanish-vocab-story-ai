@@ -1,0 +1,397 @@
+[
+  { "spanish": "consecuencia", "english": "consequence", "wordClass": "noun" },
+  { "spanish": "paradoja", "english": "paradox", "wordClass": "noun" },
+  { "spanish": "progreso", "english": "progress", "wordClass": "noun" },
+  { "spanish": "desafío", "english": "challenge", "wordClass": "noun" },
+  { "spanish": "intuición", "english": "intuition", "wordClass": "noun" },
+  { "spanish": "perspectiva", "english": "perspective", "wordClass": "noun" },
+  { "spanish": "dilema", "english": "dilemma", "wordClass": "noun" },
+  {
+    "spanish": "reconocimiento",
+    "english": "recognition",
+    "wordClass": "noun"
+  },
+  {
+    "spanish": "responsabilidad",
+    "english": "responsibility",
+    "wordClass": "noun"
+  },
+  { "spanish": "visión", "english": "vision", "wordClass": "noun" },
+  { "spanish": "ideología", "english": "ideology", "wordClass": "noun" },
+  { "spanish": "filosofía", "english": "philosophy", "wordClass": "noun" },
+  { "spanish": "percepción", "english": "perception", "wordClass": "noun" },
+  { "spanish": "reflexión", "english": "reflection", "wordClass": "noun" },
+  { "spanish": "argumento", "english": "argument", "wordClass": "noun" },
+  { "spanish": "conocimiento", "english": "knowledge", "wordClass": "noun" },
+  { "spanish": "inteligencia", "english": "intelligence", "wordClass": "noun" },
+  { "spanish": "creatividad", "english": "creativity", "wordClass": "noun" },
+  { "spanish": "experiencia", "english": "experience", "wordClass": "noun" },
+  { "spanish": "desarrollo", "english": "development", "wordClass": "noun" },
+  { "spanish": "innovación", "english": "innovation", "wordClass": "noun" },
+  { "spanish": "investigación", "english": "research", "wordClass": "noun" },
+  { "spanish": "investigador", "english": "researcher", "wordClass": "noun" },
+  { "spanish": "cambio", "english": "change", "wordClass": "noun" },
+  { "spanish": "tendencia", "english": "trend", "wordClass": "noun" },
+  { "spanish": "conexión", "english": "connection", "wordClass": "noun" },
+  { "spanish": "conflicto", "english": "conflict", "wordClass": "noun" },
+  { "spanish": "resolución", "english": "resolution", "wordClass": "noun" },
+  {
+    "spanish": "contradicción",
+    "english": "contradiction",
+    "wordClass": "noun"
+  },
+  { "spanish": "supervivencia", "english": "survival", "wordClass": "noun" },
+  { "spanish": "mentalidad", "english": "mindset", "wordClass": "noun" },
+  { "spanish": "racionalidad", "english": "rationality", "wordClass": "noun" },
+  { "spanish": "fundamento", "english": "foundation", "wordClass": "noun" },
+  { "spanish": "estructura", "english": "structure", "wordClass": "noun" },
+  {
+    "spanish": "manifestación",
+    "english": "manifestation",
+    "wordClass": "noun"
+  },
+  { "spanish": "expectativa", "english": "expectation", "wordClass": "noun" },
+  { "spanish": "sustancia", "english": "substance", "wordClass": "noun" },
+  { "spanish": "riqueza", "english": "wealth", "wordClass": "noun" },
+  { "spanish": "abundancia", "english": "abundance", "wordClass": "noun" },
+  {
+    "spanish": "transformación",
+    "english": "transformation",
+    "wordClass": "noun"
+  },
+  { "spanish": "adaptación", "english": "adaptation", "wordClass": "noun" },
+  { "spanish": "diversidad", "english": "diversity", "wordClass": "noun" },
+  { "spanish": "expansión", "english": "expansion", "wordClass": "noun" },
+  { "spanish": "compromiso", "english": "commitment", "wordClass": "noun" },
+  { "spanish": "deseo", "english": "desire", "wordClass": "noun" },
+  { "spanish": "perdón", "english": "forgiveness", "wordClass": "noun" },
+  { "spanish": "liberación", "english": "liberation", "wordClass": "noun" },
+  { "spanish": "autonomía", "english": "autonomy", "wordClass": "noun" },
+  { "spanish": "decisión", "english": "decision", "wordClass": "noun" },
+  { "spanish": "cultura", "english": "cultivation", "wordClass": "noun" },
+  { "spanish": "aumento", "english": "increase", "wordClass": "noun" },
+  { "spanish": "proporción", "english": "proportion", "wordClass": "noun" },
+  { "spanish": "poder", "english": "power", "wordClass": "noun" },
+  { "spanish": "influencia", "english": "influence", "wordClass": "noun" },
+  { "spanish": "persuasión", "english": "persuasion", "wordClass": "noun" },
+  { "spanish": "dignidad", "english": "dignity", "wordClass": "noun" },
+  { "spanish": "fe", "english": "faith", "wordClass": "noun" },
+  { "spanish": "compasión", "english": "compassion", "wordClass": "noun" },
+  { "spanish": "empatía", "english": "empathy", "wordClass": "noun" },
+  { "spanish": "integridad", "english": "integrity", "wordClass": "noun" },
+  { "spanish": "honradez", "english": "honesty", "wordClass": "noun" },
+  { "spanish": "humanidad", "english": "humanity", "wordClass": "noun" },
+  { "spanish": "valor", "english": "valor", "wordClass": "noun" },
+  { "spanish": "audiencia", "english": "audience", "wordClass": "noun" },
+  { "spanish": "esfuerzo", "english": "effort", "wordClass": "noun" },
+  { "spanish": "espectáculo", "english": "show", "wordClass": "noun" },
+  { "spanish": "suspenso", "english": "suspense", "wordClass": "noun" },
+  { "spanish": "dinámica", "english": "dynamics", "wordClass": "noun" },
+  { "spanish": "espectador", "english": "spectator", "wordClass": "noun" },
+  { "spanish": "escenario", "english": "stage", "wordClass": "noun" },
+  { "spanish": "fortaleza", "english": "fortress", "wordClass": "noun" },
+  { "spanish": "gravedad", "english": "gravity", "wordClass": "noun" },
+  {
+    "spanish": "independencia",
+    "english": "independence",
+    "wordClass": "noun"
+  },
+  { "spanish": "unión", "english": "union", "wordClass": "noun" },
+  { "spanish": "capital", "english": "capital", "wordClass": "noun" },
+  { "spanish": "beneficio", "english": "benefit", "wordClass": "noun" },
+  { "spanish": "censo", "english": "census", "wordClass": "noun" },
+  { "spanish": "respuesta", "english": "response", "wordClass": "noun" },
+  { "spanish": "voto", "english": "vote", "wordClass": "noun" },
+  { "spanish": "desempeño", "english": "performance", "wordClass": "noun" },
+  { "spanish": "cautela", "english": "caution", "wordClass": "noun" },
+  { "spanish": "frustración", "english": "frustration", "wordClass": "noun" },
+  { "spanish": "dominio", "english": "domain", "wordClass": "noun" },
+  { "spanish": "exclusividad", "english": "exclusivity", "wordClass": "noun" },
+  { "spanish": "distinción", "english": "distinction", "wordClass": "noun" },
+  {
+    "spanish": "especialización",
+    "english": "specialization",
+    "wordClass": "noun"
+  },
+  { "spanish": "impulso", "english": "impulse", "wordClass": "noun" },
+  { "spanish": "tentativa", "english": "attempt", "wordClass": "noun" },
+  { "spanish": "complicación", "english": "complication", "wordClass": "noun" },
+  { "spanish": "contraposición", "english": "opposition", "wordClass": "noun" },
+  {
+    "spanish": "sostenibilidad",
+    "english": "sustainability",
+    "wordClass": "noun"
+  },
+  { "spanish": "coherencia", "english": "coherence", "wordClass": "noun" },
+  { "spanish": "reducción", "english": "reduction", "wordClass": "noun" },
+  { "spanish": "eficiencia", "english": "efficiency", "wordClass": "noun" },
+  { "spanish": "tolerancia", "english": "tolerance", "wordClass": "noun" },
+  { "spanish": "seguridad", "english": "safety", "wordClass": "noun" },
+  { "spanish": "emergencia", "english": "emergency", "wordClass": "noun" },
+  { "spanish": "intervención", "english": "intervention", "wordClass": "noun" },
+
+  { "spanish": "absolver", "english": "to absolve", "wordClass": "verb" },
+  {
+    "spanish": "acertar",
+    "english": "to guess correctly",
+    "wordClass": "verb"
+  },
+  { "spanish": "acontecer", "english": "to happen", "wordClass": "verb" },
+  { "spanish": "adherir", "english": "to adhere", "wordClass": "verb" },
+  { "spanish": "agazapar", "english": "to crouch", "wordClass": "verb" },
+  { "spanish": "alabar", "english": "to praise", "wordClass": "verb" },
+  { "spanish": "anhelar", "english": "to yearn for", "wordClass": "verb" },
+  { "spanish": "apaciguar", "english": "to pacify", "wordClass": "verb" },
+  { "spanish": "apetecer", "english": "to feel like", "wordClass": "verb" },
+  { "spanish": "arrastrar", "english": "to drag", "wordClass": "verb" },
+  { "spanish": "atar", "english": "to tie", "wordClass": "verb" },
+  { "spanish": "burlarse", "english": "to mock", "wordClass": "verb" },
+  {
+    "spanish": "caer bien",
+    "english": "to get along with",
+    "wordClass": "verb"
+  },
+  { "spanish": "cargar", "english": "to load", "wordClass": "verb" },
+  { "spanish": "citar", "english": "to cite", "wordClass": "verb" },
+  { "spanish": "colapsar", "english": "to collapse", "wordClass": "verb" },
+  { "spanish": "compadecer", "english": "to pity", "wordClass": "verb" },
+  { "spanish": "comprender", "english": "to understand", "wordClass": "verb" },
+  {
+    "spanish": "conmover",
+    "english": "to move emotionally",
+    "wordClass": "verb"
+  },
+  { "spanish": "contradecir", "english": "to contradict", "wordClass": "verb" },
+  { "spanish": "corroborar", "english": "to corroborate", "wordClass": "verb" },
+  { "spanish": "crear", "english": "to create", "wordClass": "verb" },
+  { "spanish": "cultivar", "english": "to cultivate", "wordClass": "verb" },
+  { "spanish": "debatir", "english": "to debate", "wordClass": "verb" },
+  { "spanish": "decepcionar", "english": "to disappoint", "wordClass": "verb" },
+  { "spanish": "defraudar", "english": "to defraud", "wordClass": "verb" },
+  { "spanish": "desbordar", "english": "to overflow", "wordClass": "verb" },
+  { "spanish": "desengañar", "english": "to disillusion", "wordClass": "verb" },
+  { "spanish": "deslumbrar", "english": "to dazzle", "wordClass": "verb" },
+  { "spanish": "desmentir", "english": "to deny", "wordClass": "verb" },
+  { "spanish": "desviar", "english": "to divert", "wordClass": "verb" },
+  { "spanish": "diluir", "english": "to dilute", "wordClass": "verb" },
+  { "spanish": "discutir", "english": "to argue", "wordClass": "verb" },
+  { "spanish": "embargar", "english": "to seize", "wordClass": "verb" },
+  { "spanish": "empeorar", "english": "to worsen", "wordClass": "verb" },
+  { "spanish": "enloquecer", "english": "to drive crazy", "wordClass": "verb" },
+  { "spanish": "esclarecer", "english": "to clarify", "wordClass": "verb" },
+  { "spanish": "esconder", "english": "to hide", "wordClass": "verb" },
+  { "spanish": "esparcir", "english": "to scatter", "wordClass": "verb" },
+  { "spanish": "esperanzar", "english": "to give hope", "wordClass": "verb" },
+  { "spanish": "fomentar", "english": "to encourage", "wordClass": "verb" },
+  { "spanish": "forjar", "english": "to forge", "wordClass": "verb" },
+  { "spanish": "fugarse", "english": "to escape", "wordClass": "verb" },
+  { "spanish": "gestionar", "english": "to manage", "wordClass": "verb" },
+  { "spanish": "gritar", "english": "to shout", "wordClass": "verb" },
+  { "spanish": "homenajear", "english": "to honor", "wordClass": "verb" },
+  {
+    "spanish": "impulsar",
+    "english": "to drive, to boost",
+    "wordClass": "verb"
+  },
+  { "spanish": "incidir", "english": "to influence", "wordClass": "verb" },
+  { "spanish": "inducir", "english": "to induce", "wordClass": "verb" },
+  { "spanish": "insistir", "english": "to insist", "wordClass": "verb" },
+  { "spanish": "interrumpir", "english": "to interrupt", "wordClass": "verb" },
+  { "spanish": "intuir", "english": "to intuit", "wordClass": "verb" },
+  { "spanish": "juzgar", "english": "to judge", "wordClass": "verb" },
+  { "spanish": "lamentar", "english": "to regret", "wordClass": "verb" },
+  { "spanish": "liberar", "english": "to liberate", "wordClass": "verb" },
+  { "spanish": "lidiar", "english": "to deal with", "wordClass": "verb" },
+  { "spanish": "magnificar", "english": "to magnify", "wordClass": "verb" },
+  { "spanish": "mantener", "english": "to maintain", "wordClass": "verb" },
+  { "spanish": "matar", "english": "to kill", "wordClass": "verb" },
+  { "spanish": "mediar", "english": "to mediate", "wordClass": "verb" },
+  { "spanish": "mencionar", "english": "to mention", "wordClass": "verb" },
+  { "spanish": "necesitar", "english": "to need", "wordClass": "verb" },
+  { "spanish": "ocultar", "english": "to hide", "wordClass": "verb" },
+  { "spanish": "ofrecer", "english": "to offer", "wordClass": "verb" },
+  { "spanish": "oponerse", "english": "to oppose", "wordClass": "verb" },
+  { "spanish": "perdonar", "english": "to forgive", "wordClass": "verb" },
+  { "spanish": "perjudicar", "english": "to harm", "wordClass": "verb" },
+  { "spanish": "persuadir", "english": "to persuade", "wordClass": "verb" },
+  { "spanish": "plantear", "english": "to propose", "wordClass": "verb" },
+  { "spanish": "prever", "english": "to foresee", "wordClass": "verb" },
+  { "spanish": "probar", "english": "to prove, to test", "wordClass": "verb" },
+  { "spanish": "promover", "english": "to promote", "wordClass": "verb" },
+  { "spanish": "quedar", "english": "to stay", "wordClass": "verb" },
+  { "spanish": "reconocer", "english": "to recognize", "wordClass": "verb" },
+  { "spanish": "reducir", "english": "to reduce", "wordClass": "verb" },
+  { "spanish": "reflejar", "english": "to reflect", "wordClass": "verb" },
+  { "spanish": "rehacer", "english": "to redo", "wordClass": "verb" },
+  { "spanish": "relacionar", "english": "to relate", "wordClass": "verb" },
+  { "spanish": "reparar", "english": "to repair", "wordClass": "verb" },
+  { "spanish": "reprobar", "english": "to fail", "wordClass": "verb" },
+  { "spanish": "responder", "english": "to respond", "wordClass": "verb" },
+  {
+    "spanish": "revolucionar",
+    "english": "to revolutionize",
+    "wordClass": "verb"
+  },
+  { "spanish": "sobrellevar", "english": "to endure", "wordClass": "verb" },
+  { "spanish": "sustituir", "english": "to substitute", "wordClass": "verb" },
+  {
+    "spanish": "tener en cuenta",
+    "english": "to take into account",
+    "wordClass": "verb"
+  },
+  { "spanish": "trascender", "english": "to transcend", "wordClass": "verb" },
+  { "spanish": "utilizar", "english": "to use", "wordClass": "verb" },
+  { "spanish": "vaciar", "english": "to empty", "wordClass": "verb" },
+  { "spanish": "vulnerar", "english": "to violate", "wordClass": "verb" },
+  { "spanish": "zambullir", "english": "to dive", "wordClass": "verb" },
+  {
+    "spanish": "mundano",
+    "english": "worldly",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "odioso",
+    "english": "hateful",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "precavido",
+    "english": "cautious",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "sentimental",
+    "english": "sentimental",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "tosco",
+    "english": "crude",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "asustadizo",
+    "english": "easily frightened",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "rellenito",
+    "english": "plump",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "lambiscón",
+    "english": "bootlicking",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "leonado",
+    "english": "tawny",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "libertador",
+    "english": "liberating",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "lascivo",
+    "english": "lascivious",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "lujurioso",
+    "english": "lecherous",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "lánguido",
+    "english": "listless",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "lúgubre",
+    "english": "dismal",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "lóbrego",
+    "english": "gloomy",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "lunático",
+    "english": "lunatic",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "jactancioso",
+    "english": "boastful",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "jocoso",
+    "english": "humorous",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "jorobado",
+    "english": "hunchbacked",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "jovial",
+    "english": "jovial",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "jugoso",
+    "english": "juicy",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "jugado",
+    "english": "experienced",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "juicioso",
+    "english": "sensible",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "judicial",
+    "english": "judicial",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "jurídico",
+    "english": "legal",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "kaki",
+    "english": "khaki",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "iberoamericano",
+    "english": "Latin American",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "idiota",
+    "english": "idiotic",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "idealista",
+    "english": "idealistic",
+    "wordClass": "adjective"
+  },
+  {
+    "spanish": "ignorante",
+    "english": "ignorant",
+    "wordClass": "adjective"
+  }
+]

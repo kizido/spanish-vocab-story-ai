@@ -1,23 +1,38 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import wordList from "../vocab_lists/learningListBeginner.json";
+import beginnerVocabList from "../vocab_lists/learningListBeginner.json";
+import intermediateVocabList from "../vocab_lists/learningListIntermediate.json";
+import advancedVocabList from "../vocab_lists/learningListAdvanced.json";
 import * as flashcardStyles from "../style/Flashcards.module.css";
 
 const getRandomInt = (max) => {
   return Math.floor(Math.random() * max);
 };
-const getRandomWordIndex = () => {
+const getRandomWordIndex = (wordList) => {
   return getRandomInt(wordList.length);
+};
+const selectVocabList = (skillLevel) => {
+  switch (skillLevel) {
+    case "beginner":
+      return beginnerVocabList;
+    case "intermediate":
+      return intermediateVocabList;
+    case "advanced":
+      return advancedVocabList;
+    default:
+      return [];
+  }
 };
 
 export default function Flashcards() {
   let navigate = useNavigate();
-
   let { vocabAmount, skillLevel } = useParams();
+  let wordList = selectVocabList(skillLevel);
+
   vocabAmount = parseInt(vocabAmount);
 
   const [vocabLeft, setVocabLeft] = useState(vocabAmount);
-  const [wordIndex, setWordIndex] = useState(getRandomWordIndex());
+  const [wordIndex, setWordIndex] = useState(getRandomWordIndex(wordList));
   const [wordsToLearn, setWordsToLearn] = useState([]);
   const [wordsToNotLearn, setWordsToNotLearn] = useState([]);
   const [cardFlipped, setCardFlipped] = useState(false);
@@ -31,10 +46,9 @@ export default function Flashcards() {
   }, [wordsToLearn]);
 
   const findNewWordIndex = () => {
-    // setWordIndex(getRandomWordIndex);
     let searching = true;
     while (searching) {
-      const index = getRandomWordIndex();
+      const index = getRandomWordIndex(wordList);
       if (
         !wordsToLearn.includes(wordList[index].spanish) &&
         !wordsToNotLearn.includes(wordList[index].spanish)
@@ -45,8 +59,6 @@ export default function Flashcards() {
       if (wordsToLearn.length + wordsToNotLearn.length >= wordList.length) {
         searching = false;
       }
-      console.log("Count: " + wordsToLearn.length + wordsToNotLearn.length);
-      console.log("Length: " + wordList.length);
     }
   };
 

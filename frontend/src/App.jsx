@@ -7,7 +7,8 @@ import SkillLevel from "./pages/SkillLevel";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/skillLevel" replace />} />
+      {/* <Route path="/" element={<Navigate to="/skillLevel" replace />} /> */}
+      <Route path="/" element={<Navigate to="/skillLevel" />} />
       <Route path="/skillLevel" element={<SkillLevel />} />
       <Route path="/:skillLevel/vocabAmount" element={<VocabAmountForm />} />
       <Route path="/:skillLevel/flashcards/:vocabAmount" element={<Flashcards />} />

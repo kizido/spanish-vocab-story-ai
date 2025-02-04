@@ -24,7 +24,7 @@ export default function VocabAmountForm() {
     }
   };
   const goToFlashCards = () => {
-    navigate(`/${skillLevel}/flashcards/${vocabAmount}`);
+    navigate(`/${skillLevel}/${vocabAmount}`);
   };
   return (
     <div className={styles.vocabAmountSection}>

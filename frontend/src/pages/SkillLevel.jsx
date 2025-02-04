@@ -11,7 +11,7 @@ export default function SkillLevel() {
   const [skillLevel, setSkilllevel] = useState("");
 
   const goToVocabAmount = () => {
-    navigate(`/${skillLevel}/vocabAmount`);
+    navigate(`/${skillLevel}`);
   };
 
   useEffect(() => {
